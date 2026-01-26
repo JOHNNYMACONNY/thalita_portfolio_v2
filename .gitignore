@@ -43,3 +43,7 @@ next-env.d.ts
 # netlify
 .netlify
 
+
+# mac system
+.DS_Store
+._*
