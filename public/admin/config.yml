@@ -1,0 +1,125 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "settings"
+    label: "⚙️ Site Settings"
+    files:
+      - name: "global"
+        label: "Global (Hero, Contact)"
+        file: "content/settings/site.json"
+        fields:
+          - { label: "Site Title", name: "title", widget: "string", required: true }
+          - { label: "SEO Description", name: "description", widget: "text", hint: "Used for search results." }
+          - { label: "Contact Email", name: "email", widget: "string" }
+          - { label: "Hero Title", name: "heroTitle", widget: "string", default: "Thalita Bueno", hint: "Large text on the home page." }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text", hint: "Smaller text below the title." }
+          - { label: "Hero Background Image", name: "heroImage", widget: "image", required: false, hint: "Optional. Keep it very light/subtle or transparent png to avoid clashing with text." }
+          - label: "Social Media Links"
+            name: "socials"
+            widget: "list"
+            fields:
+              - { label: "Platform Name", name: "platform", widget: "string", hint: "e.g. Instagram" }
+              - { label: "Profile URL", name: "url", widget: "string", hint: "https://instagram.com/..." }
+              - { label: "Button Label", name: "label", widget: "string", default: "Follow", required: false }
+
+      - name: "about"
+        label: "About Page"
+        file: "content/settings/about.json"
+        fields:
+          - { label: "Bio / Story", name: "bio", widget: "markdown", hint: "Main text on the About page. Use 'enter' for new paragraphs." }
+          - { label: "Philosophy Quote", name: "philosophy", widget: "text", hint: "The large quote shown below the photo." }
+          - label: "Services Provided"
+            name: "services"
+            widget: "list"
+            fields:
+              - { label: "Service Name", name: "title", widget: "string" }
+              - { label: "Short Description", name: "description", widget: "text" }
+          - label: "Education"
+            name: "education"
+            widget: "list"
+            fields:
+              - { label: "School / Institution", name: "institution", widget: "string" }
+              - { label: "Location", name: "location", widget: "string" }
+              - { label: "Degree / Certificate", name: "degree", widget: "string" }
+          - label: "Experience / Clients"
+            name: "experience"
+            widget: "list"
+            fields:
+              - { label: "Company Name or Role", name: "company", widget: "string" }
+
+  - name: "projects"
+    label: "📂 Work / Projects"
+    label_singular: "Project"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    sortable_fields: ["featuredOrder", "date", "title"]
+    fields:
+      # 1. Basics
+      - { label: "Project Title", name: "title", widget: "string", required: true }
+      - { label: "Link Name (Auto-generated)", name: "slug", widget: "string", required: false, hint: "Leave this alone normally. It defines the project URL." }
+      - { label: "Client Name", name: "client", widget: "string", required: false }
+      
+      - label: "My Role"
+        name: "role"
+        widget: "select"
+        options: ["Lead Stylist", "Wardrobe Stylist", "Assistant Stylist", "Creative Director", "Personal Shopper", "Art Director", "Set Designer"]
+        required: true
+        hint: "Select the primary role you played."
+
+      - label: "Year"
+        name: "year"
+        widget: "number"
+        value_type: "int"
+        min: 2000
+        max: 2050
+        step: 1
+        default: 2025
+        required: true
+      
+      # 2. Categorization
+      - label: "Categories"
+        name: "categories"
+        widget: "select"
+        options: ["Editorial", "Commercial", "Entertainment", "Brand / Campaign", "Lookbook"]
+        multiple: true
+        required: true
+        hint: "Select one or more categories by clicking."
+
+      # 3. Media (Cover)
+      - { label: "Cover Image", name: "coverImage", widget: "image", required: true, hint: "The main image shown on the Portfolio grid." }
+      - { label: "Cover Image Alt Text", name: "coverAlt", widget: "string", required: false, hint: "Description for accessibility" }
+
+      # 4. Content
+      - { label: "Project Description", name: "body", widget: "markdown", required: true, hint: "Tell the story of the project." }
+      - { label: "Featured Video (YouTube URL)", name: "youtubeUrl", widget: "string", required: false, hint: "Paste a normal YouTube link (not autoplay). e.g. https://www.youtube.com/watch?v=..." }
+      
+      # 5. Additional Media
+      - label: "More Images (Gallery)"
+        name: "gallery"
+        widget: "list"
+        summary: "{{fields.src}}"
+        required: false
+        fields:
+          - { label: "Upload Image", name: "src", widget: "image" }
+          - { label: "Alt Text", name: "alt", widget: "string" }
+
+      # 6. Credits
+      - label: "Credits"
+        name: "credits"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Role", name: "role", widget: "string", hint: "e.g. Photographer" }
+          - { label: "Person Name", name: "name", widget: "string" }
+
+      # 7. Settings (Visibility & Sorting)
+      - { label: "Draft Mode? (Hide from site)", name: "isHidden", widget: "boolean", default: false, required: false, hint: "Check this to hide the project without deleting it." }
+      - { label: "Show on Home Page?", name: "isFeatured", widget: "boolean", default: true }
+      - { label: "Home Page Order", name: "featuredOrder", widget: "number", default: 99, hint: "1 appears first. 99 appears last." }
+      - { label: "Publish Date", name: "date", widget: "datetime", default: "", required: false, hint: "Used for sorting by date." }

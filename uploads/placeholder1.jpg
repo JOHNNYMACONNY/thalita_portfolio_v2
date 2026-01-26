@@ -1,0 +1,6 @@
+// This is a placeholder file to prevent 404 errors
+// In a real project, this would be an actual image file
+// For development purposes, we're using this text file with the .jpg extension
+
+// Note: In production, you would use actual image files or a content delivery network (CDN) like Cloudinary
+// as referenced in the project documentation.

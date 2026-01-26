@@ -1,0 +1,24 @@
+{
+    "title": "Thalita Bueno",
+    "description": "Portfolio of Thalita Bueno, specializing in fashion styling, creative direction, and marketing.",
+    "email": "hello@thalitabueno.com",
+    "heroTitle": "Thalita Bueno",
+    "heroSubtitle": "Fashion Stylist & Creative Director",
+    "socials": [
+        {
+            "platform": "Instagram",
+            "url": "#",
+            "label": "Instagram"
+        },
+        {
+            "platform": "LinkedIn",
+            "url": "#",
+            "label": "LinkedIn"
+        },
+        {
+            "platform": "Pinterest",
+            "url": "#",
+            "label": "Pinterest"
+        }
+    ]
+}

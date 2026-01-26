@@ -1,0 +1,36 @@
+{
+    "bio": "I am a passionate fashion stylist and marketing professional with a unique approach that blends creativity with strategic visual storytelling. My background allows me to not just style an outfit, but to create a cohesive narrative that resonates with audiences.\n\nBased in Los Angeles, I specialize in bringing an alternative, youthful energy to every project, whether it's an editorial shoot, a commercial campaign, or a personal wardrobe refresh.",
+    "philosophy": "\"Fashion is not just about what you wear, but about the story you tell. It's about purpose, confidence, and authenticity.\"",
+    "services": [
+        {
+            "title": "Personal Shopping",
+            "description": "Stress-free, guided shopping to help you build a wardrobe you love."
+        },
+        {
+            "title": "Wardrobe Organization",
+            "description": "Edit and refresh your closet for clarity, functionality, and style."
+        },
+        {
+            "title": "Editorial & Commercial",
+            "description": "Full concept-to-execution styling for brands and publications."
+        }
+    ],
+    "education": [
+        {
+            "institution": "Fashion Institute of Technology",
+            "location": "New York",
+            "degree": "Wardrobe Styling & Marketing Certification"
+        }
+    ],
+    "experience": [
+        {
+            "company": "Telo Mobile Brand"
+        },
+        {
+            "company": "Bnine Bank"
+        },
+        {
+            "company": "Freelance Styling"
+        }
+    ]
+}

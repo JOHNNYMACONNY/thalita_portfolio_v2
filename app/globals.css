@@ -1,26 +1,50 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --font-heading: var(--font-heading);
+  --font-caooli: var(--font-caooli);
+  --font-body: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 
-@theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* Target Site Palette */
+  --color-magenta: #e052a0;
+  --color-mocha: #a47551;
+  --color-charcoal: #292f36;
+  --color-soft-white: #faf7f4;
+  --color-gradient-start: #fae3c6;
+  --color-gradient-end: #c6e2fa;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #faf7f4;
+  --foreground: #292f36;
 }
 
 body {
-  background: var(--background);
+  /* Soft gradient background matching thalitabueno.com */
+  background: linear-gradient(to bottom right, var(--color-gradient-start), var(--color-gradient-end));
+  background-attachment: fixed;
+  /* Keep gradient fixed during scroll */
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes scroll-down {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.animate-scroll-down {
+  animation: scroll-down 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
 }

@@ -1,0 +1,24 @@
+{
+    "categories": [
+        {
+            "name": "Editorial",
+            "slug": "editorial"
+        },
+        {
+            "name": "Commercial",
+            "slug": "commercial"
+        },
+        {
+            "name": "Personal Styling",
+            "slug": "personal-styling"
+        },
+        {
+            "name": "Streetwear",
+            "slug": "streetwear"
+        },
+        {
+            "name": "High Fashion",
+            "slug": "high-fashion"
+        }
+    ]
+}
