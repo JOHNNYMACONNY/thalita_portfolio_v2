@@ -46,7 +46,21 @@ collections:
               - { label: "School / Institution", name: "institution", widget: "string" }
               - { label: "Location", name: "location", widget: "string" }
               - { label: "Degree / Certificate", name: "degree", widget: "string" }
-          - label: "Experience / Clients"
+      - name: "services"
+        label: "Services Page"
+        file: "content/settings/services.json"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string", default: "Services" }
+          - label: "Service Categories"
+            name: "services"
+            widget: "list"
+            fields:
+              - { label: "Category Name", name: "category", widget: "string" }
+              - { label: "Service Items", name: "items", widget: "list", field: { label: "Item", name: "item", widget: "string" } }
+          - { label: "Bottom CTA Text", name: "ctaText", widget: "text" }
+
+      - name: "experience"
+        label: "Experience / Clients"
             name: "experience"
             widget: "list"
             fields:

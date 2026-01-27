@@ -31,14 +31,25 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## 📁 Project Structure
 
-- \`app/\`: Application routes and pages.
+## 📁 Project Structure
+- \`app/\`: Application routes (Home, Work, About, Services).
 - \`components/\`: Reusable UI components.
-- \`utils/\`: Utility functions.
-- \`public/\`: Static assets.
+- \`content/\`: CMS-managed data (JSON/Markdown).
+- \`public/admin/\`: Decap CMS configuration.
 
-## 📝 Roadmap
+## 📝 Roadmap & Status
 
-See [.gsd/ROADMAP.md](.gsd/ROADMAP.md) for detailed progress.
+See [.gsd/ROADMAP.md](.gsd/ROADMAP.md) for detailed granular progress.
 
-- [x] Source Code Recovery & Hardening
-- [ ] Visual Redesign (In Progress)
+- [x] **Source Code Recovery & Hardening**
+- [x] **Visual Redesign (Editorial Elevation)**
+    - "Plates" aesthetic for Homepage.
+    - "Spread" layout for Projects.
+    - Minimalist Typography (Caooli / Orlient).
+- [x] **CMS Integration**
+    - Services Page (JSON managed).
+    - Project Content (Markdown managed).
+- [x] **Mobile & Performance**
+    - Responsive Hardening (iPhone X verified).
+    - LCP Optimization.
+    - Custom 404 Page.

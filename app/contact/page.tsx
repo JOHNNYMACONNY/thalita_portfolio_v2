@@ -45,7 +45,9 @@ export default function Contact() {
 
             </main>
 
-            <Footer email={settings.email} socials={settings.socials} />
+            <div className="w-full max-w-[1600px] mx-auto px-4 md:px-12">
+                <Footer email={settings.email} socials={settings.socials} />
+            </div>
         </div>
     );
 }

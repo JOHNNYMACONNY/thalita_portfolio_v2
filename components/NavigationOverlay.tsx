@@ -82,6 +82,7 @@ export default function NavigationOverlay({ isOpen, onClose }: NavigationOverlay
                     <nav className="flex flex-col items-center gap-6 text-center">
                         <NavLink href="/" label="Home" currentPath={pathname} onClick={onClose} />
                         <NavLink href="/#portfolio" label="Portfolio" currentPath={pathname} onClick={onClose} />
+                        <NavLink href="/services" label="Services" currentPath={pathname} onClick={onClose} />
                         <NavLink href="/about" label="About" currentPath={pathname} onClick={onClose} />
                         <NavLink href="/contact" label="Contact" currentPath={pathname} onClick={onClose} />
                     </nav>

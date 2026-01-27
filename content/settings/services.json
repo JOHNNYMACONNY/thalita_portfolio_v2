@@ -1,0 +1,33 @@
+{
+    "title": "Services",
+    "services": [
+        {
+            "category": "Creative Direction",
+            "items": [
+                "Campaign Concepting",
+                "Visual Identity",
+                "Art Direction",
+                "Brand Storytelling"
+            ]
+        },
+        {
+            "category": "Styling",
+            "items": [
+                "Editorial & Commercial",
+                "Red Carpet / Celebrity",
+                "Music Video & Performance",
+                "Brand Campaign"
+            ]
+        },
+        {
+            "category": "Consultation",
+            "items": [
+                "Image Consulting",
+                "Wardrobe Curation",
+                "Trend Forecasting",
+                "Personal Shopping"
+            ]
+        }
+    ],
+    "ctaText": "Available for select projects worldwide. For bespoke needs or collaboration inquiries, please reach out directly."
+}

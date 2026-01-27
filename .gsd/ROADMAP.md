@@ -15,11 +15,21 @@ Status: ACTIVE
 - [x] Run linting and fix top-level issues.
 
 ## P2: Handover
-- [ ] Update `README.md`.
+- [x] Update `README.md`.
 
-## Phase 2: Visual Redesign
-- [ ] Implement Design System (CSS/Tailwind).
-- [ ] Create Home Card & Hero.
-- [ ] Build Navigation Overlay.
-- [ ] Refactor Portfolio Grid.
-- [ ] Verify vs Target Design.
+## Phase 2: Visual Redesign (COMPLETED)
+- [x] Implement Design System (CSS/Tailwind).
+- [x] Create Home Card & Hero.
+- [x] Build Navigation Overlay.
+- [x] Refactor Portfolio Grid.
+- [x] Verify vs Target Design.
+
+## Phase 3: CMS Integration (COMPLETED)
+- [x] Create Services Page.
+- [x] Connect CMS to Data Layer.
+- [x] Verify Content Editing.
+
+## Phase 4: Mobile & Performance (COMPLETED)
+- [x] Mobile Visual Audit.
+- [x] LCP Optimization.
+- [x] Final Polish (Linting, 404).

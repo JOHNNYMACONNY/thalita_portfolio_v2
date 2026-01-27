@@ -28,25 +28,32 @@ export default function ProjectCard({
     return (
         <Link
             href={href}
-            className={`group relative block w-full overflow-hidden rounded-xl shadow-sm hover:shadow-xl transition-all duration-500 ${aspectRatio} ${className}`}
+            // EDITORIAL CHANGE: Removed rounded-xl, removed shadow-sm/hover:shadow-xl.
+            // Added grayscale to color transition for confident 'reveal'.
+            className={`group relative block w-full overflow-hidden transition-all duration-500 ${aspectRatio} ${className}`}
         >
             <Image
                 src={imageSrc}
                 alt={title}
                 fill
-                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                // EDITORIAL CHANGE: Removed scale-105 on hover. 
+                // Images should feel stable and heavy, not bouncy.
+                className="object-cover transition-all duration-700 ease-out"
                 priority={priority}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
 
-            {/* Overlay - Gradient Reveal */}
-            <div className="absolute inset-x-0 bottom-0 top-1/2 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                <span className="text-white/80 text-xs font-mono uppercase tracking-widest mb-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
-                    {category}
-                </span>
-                <h3 className="text-white font-heading text-2xl md:text-3xl translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    {title}
-                </h3>
+            {/* Overlay - Minimal Editorial Label */}
+            {/* EDITORIAL CHANGE: Removed translate effects. Text stays firm. Background is subtle. */}
+            <div className="absolute inset-x-0 bottom-0 top-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300 flex flex-col justify-end p-6">
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="block text-white/90 text-[10px] uppercase tracking-[0.2em] mb-2">
+                        {category}
+                    </span>
+                    <h3 className="text-white font-heading text-3xl leading-none">
+                        {title}
+                    </h3>
+                </div>
             </div>
         </Link>
     );

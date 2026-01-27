@@ -11,8 +11,8 @@ interface HeroProps {
 export default function Hero({ title, subtitle }: HeroProps) {
     return (
         <section className="flex flex-col items-center justify-center text-center min-h-[70vh] mb-24 pt-32 relative overflow-hidden">
-            {/* Background Decorative Elements (Optional for 'Ethereal' feel) */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-magenta/5 rounded-full blur-[100px] -z-10" />
+            {/* Background Decorative Elements (Removed for Editorial Cleanliness) */}
+            {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-magenta/5 rounded-full blur-[100px] -z-10" /> */}
 
             <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -58,7 +58,8 @@ export default function Hero({ title, subtitle }: HeroProps) {
                 {/* Primary CTA: View Work */}
                 <Link
                     href="#portfolio"
-                    className="group relative px-8 py-3 bg-charcoal text-white rounded-full overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-105 hover:bg-magenta"
+                    // EDITORIAL CHANGE: Removed rounded-full. Sharp corners.
+                    className="group relative px-8 py-3 bg-charcoal text-white transition-all duration-300 hover:bg-magenta"
                 >
                     <span className="relative z-10 text-xs font-bold uppercase tracking-widest">
                         View Selected Works
