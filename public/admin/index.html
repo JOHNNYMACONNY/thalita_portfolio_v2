@@ -11,6 +11,14 @@
   <!-- Explicitly point to the config to prevent 404s on some URLs -->
   <link rel="cms-config-url" type="text/yaml" href="/admin/config.yml" />
 
+  <script>
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      window.CMS_CONFIG = {
+        local_backend: true
+      };
+    }
+  </script>
+
   <!-- Netlify Identity Widget -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
