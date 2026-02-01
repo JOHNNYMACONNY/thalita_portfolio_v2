@@ -13,6 +13,13 @@
 - Performance: LCP Optimization (Priority images).
 - Polish: Custom 404 Page, Zero Lint Errors (Strict Mode).
 
+### 3. Phase 5: Troubleshooting
+**Status**: [Done]
+**Accomplished**:
+- Resolved "Failed to open database" dev server crash.
+- Cleared corrupted Turbopack persistence in `.next`.
+- Removed macOS metadata `._` files interfering with build.
+
 ## ⏭️ Next Steps
 1.  **Handover**: Review `walkthrough.md` with user.
 2.  **Deployment**: Ready for production build and Netlify deployment.

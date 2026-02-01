@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: main
+local_backend: true
 
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
@@ -61,6 +62,9 @@ collections:
 
       - name: "experience"
         label: "Experience / Clients"
+        file: "content/settings/experience.json"
+        fields:
+          - label: "Experience List"
             name: "experience"
             widget: "list"
             fields:
@@ -74,66 +78,63 @@ collections:
     slug: "{{slug}}"
     sortable_fields: ["featuredOrder", "date", "title"]
     fields:
-      # 1. Basics
-      - { label: "Project Title", name: "title", widget: "string", required: true }
-      - { label: "Link Name (Auto-generated)", name: "slug", widget: "string", required: false, hint: "Leave this alone normally. It defines the project URL." }
-      - { label: "Client Name", name: "client", widget: "string", required: false }
+      - { label: "Project Title", name: "title", widget: "string", required: true, hint: "The name of the photoshoot or campaign." }
+      - { label: "Identifier (URL)", name: "slug", widget: "string", required: false, hint: "Auto-generated from title. Change only if you need a specific URL." }
       
-      - label: "My Role"
-        name: "role"
-        widget: "select"
-        options: ["Lead Stylist", "Wardrobe Stylist", "Assistant Stylist", "Creative Director", "Personal Shopper", "Art Director", "Set Designer"]
-        required: true
-        hint: "Select the primary role you played."
-
-      - label: "Year"
-        name: "year"
-        widget: "number"
-        value_type: "int"
-        min: 2000
-        max: 2050
-        step: 1
-        default: 2025
-        required: true
-      
-      # 2. Categorization
-      - label: "Categories"
-        name: "categories"
-        widget: "select"
-        options: ["Editorial", "Commercial", "Entertainment", "Brand / Campaign", "Lookbook"]
-        multiple: true
-        required: true
-        hint: "Select one or more categories by clicking."
-
-      # 3. Media (Cover)
-      - { label: "Cover Image", name: "coverImage", widget: "image", required: true, hint: "The main image shown on the Portfolio grid." }
-      - { label: "Cover Image Alt Text", name: "coverAlt", widget: "string", required: false, hint: "Description for accessibility" }
-
-      # 4. Content
-      - { label: "Project Description", name: "body", widget: "markdown", required: true, hint: "Tell the story of the project." }
-      - { label: "Featured Video (YouTube URL)", name: "youtubeUrl", widget: "string", required: false, hint: "Paste a normal YouTube link (not autoplay). e.g. https://www.youtube.com/watch?v=..." }
-      
-      # 5. Additional Media
-      - label: "More Images (Gallery)"
-        name: "gallery"
-        widget: "list"
-        summary: "{{fields.src}}"
-        required: false
+      - label: "Project Info"
+        name: "info_section"
+        widget: "object"
         fields:
-          - { label: "Upload Image", name: "src", widget: "image" }
-          - { label: "Alt Text", name: "alt", widget: "string" }
+          - { label: "Client Name", name: "client", widget: "string", required: false, hint: "Who was this for? (e.g. Vogue, Nike)" }
+          - label: "My Role"
+            name: "role"
+            widget: "select"
+            options: ["Lead Stylist", "Wardrobe Stylist", "Assistant Stylist", "Creative Director", "Personal Shopper", "Art Director", "Set Designer"]
+            required: true
+          - label: "Collection Year"
+            name: "year"
+            widget: "number"
+            value_type: "int"
+            default: 2025
+            required: true
+          - label: "Project Categories"
+            name: "categories"
+            widget: "select"
+            options: ["Editorial", "Commercial", "Entertainment", "Brand / Campaign", "Lookbook"]
+            multiple: true
+            required: true
 
-      # 6. Credits
-      - label: "Credits"
-        name: "credits"
-        widget: "list"
-        required: false
+      - label: "Main Media"
+        name: "media_section"
+        widget: "object"
         fields:
-          - { label: "Role", name: "role", widget: "string", hint: "e.g. Photographer" }
-          - { label: "Person Name", name: "name", widget: "string" }
+          - { label: "Cover Image", name: "coverImage", widget: "image", required: true, hint: "The primary vertical image for the grid." }
+          - { label: "Featured Video (YouTube Link)", name: "youtubeUrl", widget: "string", required: false, hint: "Paste link if there is a video element." }
 
-      # 7. Settings (Visibility & Sorting)
-      - { label: "Draft Mode? (Hide from site)", name: "isHidden", widget: "boolean", default: false, required: false, hint: "Check this to hide the project without deleting it." }
-      - { label: "Show on Home Page?", name: "isFeatured", widget: "boolean", default: true }
-      - { label: "Home Page Order", name: "featuredOrder", widget: "number", default: 99, hint: "1 appears first. 99 appears last." }
-      - { label: "Publish Date", name: "date", widget: "datetime", default: "", required: false, hint: "Used for sorting by date." }
+      - label: "Story & Details"
+        name: "content_section"
+        widget: "object"
+        fields:
+          - { label: "Description", name: "body", widget: "markdown", required: true, hint: "Write the context or story behind the work." }
+          - label: "Image Gallery"
+            name: "gallery"
+            widget: "list"
+            summary: "{{fields.src}}"
+            fields:
+              - { label: "Upload Image", name: "src", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string", hint: "Description for screen readers." }
+          - label: "Creative Team / Credits"
+            name: "credits"
+            widget: "list"
+            fields:
+              - { label: "Role", name: "role", widget: "string", hint: "e.g. Photographer" }
+              - { label: "Name", name: "name", widget: "string" }
+
+      - label: "Display Settings"
+        name: "display_section"
+        widget: "object"
+        fields:
+          - { label: "Hide Project?", name: "isHidden", widget: "boolean", default: false, hint: "Check to save as draft." }
+          - { label: "Feature on Home?", name: "isFeatured", widget: "boolean", default: true }
+          - { label: "Sorting Weight", name: "featuredOrder", widget: "number", default: 99, hint: "Lower numbers (1, 2) come first." }
+          - { label: "Publish Date", name: "date", widget: "datetime", default: "", required: false }

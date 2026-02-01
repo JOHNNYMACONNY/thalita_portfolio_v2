@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "find . -name '._*' -delete && next dev",
+    "dev:admin": "npx decap-server",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"

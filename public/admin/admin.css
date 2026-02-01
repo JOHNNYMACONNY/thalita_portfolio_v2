@@ -1,0 +1,136 @@
+/* 
+  Admin UX Customization for Thalita Portfolio
+  Aesthetics: Intentional Minimalism, Editorial, Premium
+*/
+
+/* --- Global Overrides --- */
+:root {
+    --primary: #1a1a1a;
+    --accent: #d2b48c;
+    /* Subtle tan/nude for accents */
+    --bg-main: #fcfcfc;
+    --text-muted: #666;
+}
+
+/* Override the Netlify Blue with Editorial Black/Neutral */
+body {
+    background-color: var(--bg-main) !important;
+}
+
+/* Header / Navigation */
+header nav {
+    background-color: #fff !important;
+    border-bottom: 1px solid #efefef !important;
+    box-shadow: none !important;
+}
+
+header nav a {
+    color: var(--primary) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.75rem !important;
+    font-weight: 500 !important;
+}
+
+header nav a[aria-current="page"] {
+    border-bottom: 2px solid var(--primary) !important;
+}
+
+/* Sidebar / Collections */
+aside {
+    background-color: #fff !important;
+    border-right: 1px solid #efefef !important;
+}
+
+aside ul li a {
+    font-size: 0.85rem !important;
+    color: var(--text-muted) !important;
+    border-radius: 0 !important;
+    transition: all 0.2s ease;
+}
+
+aside ul li a:hover,
+aside ul li a[aria-current="page"] {
+    background-color: #f7f7f7 !important;
+    color: var(--primary) !important;
+}
+
+/* Main Dashboard Cards */
+main>div>div {
+    border-radius: 0 !important;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.03) !important;
+    border: 1px solid #efefef !important;
+}
+
+/* Editor UI */
+.nc-app-container .nc-editor-container {
+    background-color: var(--bg-main) !important;
+}
+
+.nc-editor-controlPane {
+    border-radius: 0 !important;
+    padding: 3rem !important;
+    background-color: #fff !important;
+    border: 1px solid #efefef !important;
+}
+
+/* Buttons */
+button,
+.nc-app-container button {
+    border-radius: 0 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.nc-app-container .nc-ui-control-button-primary {
+    background-color: var(--primary) !important;
+    color: #fff !important;
+}
+
+.nc-app-container .nc-ui-control-button-primary:hover {
+    background-color: #333 !important;
+    transform: translateY(-1px);
+}
+
+/* Fields Styles */
+.nc-controlPane-widget {
+    margin-bottom: 2.5rem !important;
+}
+
+label {
+    text-transform: uppercase !important;
+    font-size: 0.65rem !important;
+    letter-spacing: 0.1em !important;
+    color: #999 !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.75rem !important;
+}
+
+input,
+textarea,
+select {
+    border-radius: 0 !important;
+    border: 1px solid #e0e0e0 !important;
+    padding: 0.8rem !important;
+    font-family: inherit !important;
+    transition: border-color 0.2s ease !important;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--primary) !important;
+    outline: none !important;
+}
+
+/* Preview Pane - Make it look like a viewport */
+.nc-editor-previewPane {
+    background-color: #f0f0f0 !important;
+    border-left: 1px solid #efefef !important;
+}
+
+.nc-previewPane-frame {
+    margin: 2rem !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1) !important;
+    background-color: #fff !important;
+}
