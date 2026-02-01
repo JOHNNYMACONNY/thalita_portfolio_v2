@@ -27,30 +27,38 @@ const ProjectPreview = createClass({
                 role && h('p', { className: 'role' }, h('strong', {}, 'Role: '), role)
             ),
 
-            // Media Section
+            // Media Section (Cover)
             coverImage && h('div', { className: 'main-image' },
                 h('img', { src: this.props.getAsset(coverImage).toString() })
             ),
 
-            // Content Section
+            // Content Section (Body)
             h('div', { className: 'content' },
                 this.props.widgetFor('body')
             ),
 
             // Gallery Grid
             gallery && h('div', { className: 'gallery-grid' },
-                gallery.map((item, index) => h('div', { key: index, className: 'gallery-item' },
-                    h('img', { src: this.props.getAsset(item.get('src')).toString() })
-                ))
+                gallery.map((item, index) => {
+                    if (!item) return null;
+                    const src = item.get('src');
+                    if (!src) return null;
+                    return h('div', { key: index, className: 'gallery-item' },
+                        h('img', { src: this.props.getAsset(src).toString() })
+                    );
+                })
             ),
 
             // Credits Section
             credits && h('div', { className: 'credits' },
                 h('h3', {}, 'Credits'),
-                credits.map((item, index) => h('p', { key: index },
-                    h('span', { className: 'credit-role' }, item.get('role') + ': '),
-                    h('span', { className: 'credit-name' }, item.get('name'))
-                ))
+                credits.map((item, index) => {
+                    if (!item) return null;
+                    return h('p', { key: index },
+                        h('span', { className: 'credit-role' }, (item.get('role') || 'Role') + ': '),
+                        h('span', { className: 'credit-name' }, (item.get('name') || 'Name'))
+                    );
+                })
             )
         );
     }

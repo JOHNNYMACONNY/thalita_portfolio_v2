@@ -78,63 +78,38 @@ collections:
     slug: "{{slug}}"
     sortable_fields: ["featuredOrder", "date", "title"]
     fields:
+      # --- 1. Basics & Identification ---
       - { label: "Project Title", name: "title", widget: "string", required: true, hint: "The name of the photoshoot or campaign." }
       - { label: "Identifier (URL)", name: "slug", widget: "string", required: false, hint: "Auto-generated from title. Change only if you need a specific URL." }
       
-      - label: "Project Info"
-        name: "info_section"
-        widget: "object"
-        fields:
-          - { label: "Client Name", name: "client", widget: "string", required: false, hint: "Who was this for? (e.g. Vogue, Nike)" }
-          - label: "My Role"
-            name: "role"
-            widget: "select"
-            options: ["Lead Stylist", "Wardrobe Stylist", "Assistant Stylist", "Creative Director", "Personal Shopper", "Art Director", "Set Designer"]
-            required: true
-          - label: "Collection Year"
-            name: "year"
-            widget: "number"
-            value_type: "int"
-            default: 2025
-            required: true
-          - label: "Project Categories"
-            name: "categories"
-            widget: "select"
-            options: ["Editorial", "Commercial", "Entertainment", "Brand / Campaign", "Lookbook"]
-            multiple: true
-            required: true
+      # --- 2. Project Info ---
+      - { label: "Client Name", name: "client", widget: "string", required: false, hint: "Who was this for? (e.g. Vogue, Nike)" }
+      - { label: "My Role", name: "role", widget: "select", options: ["Lead Stylist", "Wardrobe Stylist", "Assistant Stylist", "Creative Director", "Personal Shopper", "Art Director", "Set Designer"], required: true }
+      - { label: "Collection Year", name: "year", widget: "number", value_type: "int", default: 2025, required: true }
+      - { label: "Project Categories", name: "categories", widget: "select", options: ["Editorial", "Commercial", "Entertainment", "Brand / Campaign", "Lookbook"], multiple: true, required: true }
 
-      - label: "Main Media"
-        name: "media_section"
-        widget: "object"
-        fields:
-          - { label: "Cover Image", name: "coverImage", widget: "image", required: true, hint: "The primary vertical image for the grid." }
-          - { label: "Featured Video (YouTube Link)", name: "youtubeUrl", widget: "string", required: false, hint: "Paste link if there is a video element." }
+      # --- 3. Media (Cover & Video) ---
+      - { label: "Cover Image", name: "coverImage", widget: "image", required: true, hint: "The primary vertical image for the grid." }
+      - { label: "Featured Video (YouTube Link)", name: "youtubeUrl", widget: "string", required: false, hint: "Paste link if there is a video element." }
 
-      - label: "Story & Details"
-        name: "content_section"
-        widget: "object"
+      # --- 4. Content & Story ---
+      - { label: "Description", name: "body", widget: "markdown", required: true, hint: "Write the context or story behind the work." }
+      - label: "Image Gallery"
+        name: "gallery"
+        widget: "list"
+        summary: "{{fields.src}}"
         fields:
-          - { label: "Description", name: "body", widget: "markdown", required: true, hint: "Write the context or story behind the work." }
-          - label: "Image Gallery"
-            name: "gallery"
-            widget: "list"
-            summary: "{{fields.src}}"
-            fields:
-              - { label: "Upload Image", name: "src", widget: "image" }
-              - { label: "Alt Text", name: "alt", widget: "string", hint: "Description for screen readers." }
-          - label: "Creative Team / Credits"
-            name: "credits"
-            widget: "list"
-            fields:
-              - { label: "Role", name: "role", widget: "string", hint: "e.g. Photographer" }
-              - { label: "Name", name: "name", widget: "string" }
+          - { label: "Upload Image", name: "src", widget: "image" }
+          - { label: "Alt Text", name: "alt", widget: "string", hint: "Description for screen readers." }
+      - label: "Creative Team / Credits"
+        name: "credits"
+        widget: "list"
+        fields:
+          - { label: "Role", name: "role", widget: "string", hint: "e.g. Photographer" }
+          - { label: "Name", name: "name", widget: "string" }
 
-      - label: "Display Settings"
-        name: "display_section"
-        widget: "object"
-        fields:
-          - { label: "Hide Project?", name: "isHidden", widget: "boolean", default: false, hint: "Check to save as draft." }
-          - { label: "Feature on Home?", name: "isFeatured", widget: "boolean", default: true }
-          - { label: "Sorting Weight", name: "featuredOrder", widget: "number", default: 99, hint: "Lower numbers (1, 2) come first." }
-          - { label: "Publish Date", name: "date", widget: "datetime", default: "", required: false }
+      # --- 5. Display Settings ---
+      - { label: "Hide Project?", name: "isHidden", widget: "boolean", default: false, hint: "Check to save as draft." }
+      - { label: "Feature on Home?", name: "isFeatured", widget: "boolean", default: true }
+      - { label: "Sorting Weight", name: "featuredOrder", widget: "number", default: 99, hint: "Lower numbers (1, 2) come first." }
+      - { label: "Publish Date", name: "date", widget: "datetime", default: "", required: false }
