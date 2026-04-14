@@ -16,6 +16,8 @@
 - `C-03`: Do not remove legacy routes in Phase 2; migrate data safely first.
 - `C-04`: Handle legacy category mapping ambiguity explicitly instead of guessing.
 - `C-05`: Include imported-data completeness verification and a durable audit artifact.
+- `C-06`: Preserve only minimal provenance fields for traceability; do not restore full legacy project metadata as first-class Work UI data.
+- `C-07`: Make canonical category mapping explicit and gated; if editorial sign-off is still needed, block dataset import on a checkpoint rather than leaving the mapping unresolved.
 
 ## Coverage Map
 
@@ -31,14 +33,18 @@
 | RESEARCH | R-04 | Use deterministic IDs and Sanity NDJSON import flow for reruns | `02-02-PLAN.md` |
 | RESEARCH | R-05 | Fail the migration on unmapped or ambiguous categories | `02-02-PLAN.md`, `02-03-PLAN.md` |
 | RESEARCH | R-06 | Verify completeness with count and assignment auditing after import | `02-03-PLAN.md` |
+| RESEARCH | OQ-01 | Preserve minimal provenance fields for traceability instead of restoring full legacy project metadata as first-class UI data | `02-01-PLAN.md`, `02-02-PLAN.md` |
+| RESEARCH | OQ-02 | Encode canonical category mapping as an explicit checked-in table plus blocking approval gate before import | `02-02-PLAN.md`, `02-03-PLAN.md` |
 | STATE | S-01 | Preserve the Phase 1 three-slot category governance and fixed category IDs | `02-01-PLAN.md`, `02-02-PLAN.md` |
 | STATE | S-02 | Support the current overlap period before route replacement work lands | `02-01-PLAN.md` |
 | USER | C-01 | Non-Work JSON/settings remain filesystem-backed | `02-01-PLAN.md` |
 | USER | C-02 | Single-category, image-centric model stays intact | `02-01-PLAN.md`, `02-02-PLAN.md` |
 | USER | C-03 | Legacy routes remain present in Phase 2 | `02-01-PLAN.md` |
-| USER | C-04 | Category ambiguity is explicit, not implicit | `02-02-PLAN.md` |
+| USER | C-04 | Category ambiguity is explicit, not implicit | `02-02-PLAN.md`, `02-03-PLAN.md` |
 | USER | C-05 | Imported-data completeness is checked and documented | `02-03-PLAN.md` |
+| USER | C-06 | Minimal provenance is preserved without restoring full project metadata as UI data | `02-01-PLAN.md`, `02-02-PLAN.md` |
+| USER | C-07 | Canonical category mapping is explicit and gated before import execution | `02-02-PLAN.md`, `02-03-PLAN.md` |
 
 ## Result
 
-All in-scope roadmap, requirements, research, state, and user-preserved constraints are covered by the Phase 2 plan set. No deferred or out-of-scope items were added.
+All in-scope roadmap, requirements, research, state, and user-preserved constraints are covered by the Phase 2 plan set. The planning revision closes the prior gaps by assigning ownership of the real Sanity dataset import to `02-02-PLAN.md`, resolving the provenance question in favor of minimal traceability fields only, and converting the canonical category mapping question into an explicit checked-in mapping table plus a blocking approval checkpoint before import. No deferred or out-of-scope items were added.
