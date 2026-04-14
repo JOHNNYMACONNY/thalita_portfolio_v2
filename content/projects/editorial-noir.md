@@ -1,6 +1,6 @@
 ---
 title: Concept Photoshoot
-slug: concept-1
+slug: editorial-noir
 client: tired woman
 role: Lead Stylist
 year: "2024"
