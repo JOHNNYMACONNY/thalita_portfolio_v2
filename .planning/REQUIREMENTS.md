@@ -29,7 +29,7 @@
 
 ### Migration and Cleanup
 
-- [ ] **MIG-01**: The Work experience can start from an intentionally empty Sanity gallery dataset, with editors adding new categories and gallery items manually without relying on legacy markdown photo import
+- [x] **MIG-01**: The Work experience can start from an intentionally empty Sanity gallery dataset, with editors adding new categories and gallery items manually without relying on legacy markdown photo import
 - [ ] **MIG-02**: Legacy `/work/[slug]` pages, `app/portfolio/page.tsx`, and Decap CMS admin assets are removed after replacement routes are verified
 - [ ] **MIG-03**: Next.js image configuration supports Sanity-hosted images and no longer depends on legacy CMS assumptions for Work content
 
@@ -68,7 +68,7 @@
 | CAT-03 | Phase 3 | Pending |
 | HOME-01 | Phase 4 | Pending |
 | HOME-02 | Phase 4 | Pending |
-| MIG-01 | Phase 2 | Pending |
+| MIG-01 | Phase 2 | Complete |
 | MIG-02 | Phase 5 | Pending |
 | MIG-03 | Phase 5 | Pending |
 
