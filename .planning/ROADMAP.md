@@ -31,8 +31,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 3 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Install Sanity dependencies and add embedded Studio/client foundation files
-- [ ] 01-02-PLAN.md — Define category and gallery item schemas plus three-category Studio governance
+- [x] 01-01-PLAN.md — Install Sanity dependencies and add embedded Studio/client foundation files
+- [x] 01-02-PLAN.md — Define category and gallery item schemas plus three-category Studio governance
 - [ ] 01-03-PLAN.md — Add env/setup docs and verify embedded Studio access
 
 ### Phase 2: Data Layer Migration
