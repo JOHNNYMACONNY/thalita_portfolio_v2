@@ -82,5 +82,43 @@ export const galleryItem = defineType({
           return value >= 1 ? true : "Home page order must be at least 1.";
         }),
     }),
+    defineField({
+      name: "legacyProjectSlug",
+      title: "Legacy Project Slug",
+      type: "string",
+      description: "Optional provenance field used to bridge the legacy /work/[slug] route during migration.",
+    }),
+    defineField({
+      name: "legacyProjectTitle",
+      title: "Legacy Project Title",
+      type: "string",
+      description: "Optional provenance label for grouping imported gallery items back into the temporary legacy project view.",
+    }),
+    defineField({
+      name: "legacySourceFile",
+      title: "Legacy Source File",
+      type: "string",
+      description: "Optional source markdown path retained for migration auditing.",
+    }),
+    defineField({
+      name: "legacyImageRole",
+      title: "Legacy Image Role",
+      type: "string",
+      options: {
+        list: [
+          { title: "Cover", value: "cover" },
+          { title: "Gallery", value: "gallery" },
+        ],
+        layout: "radio",
+      },
+      description: "Optional provenance marker identifying whether this image was the legacy cover or a gallery image.",
+    }),
+    defineField({
+      name: "legacyFeaturedOrder",
+      title: "Legacy Featured Order",
+      type: "number",
+      description: "Optional ordering hint used only while the legacy project grid still exists.",
+      validation: (rule) => rule.integer().min(1),
+    }),
   ],
 });
