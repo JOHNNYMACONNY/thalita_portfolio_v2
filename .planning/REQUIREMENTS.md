@@ -9,7 +9,7 @@
 
 - [x] **SAN-01**: Editor can manage exactly three visible Work categories in Sanity with title, slug, description, cover image, and display order
 - [x] **SAN-02**: Editor can manage gallery items in Sanity with image, alt text, category references, visibility, and home page curation fields
-- [ ] **SAN-03**: Next.js app can fetch categories and gallery items from Sanity in production without relying on markdown project files
+- [x] **SAN-03**: Next.js app can fetch categories and gallery items from Sanity in production without relying on markdown project files
 
 ### Work Landing
 
@@ -60,7 +60,7 @@
 |-------------|-------|--------|
 | SAN-01 | Phase 1 | Complete |
 | SAN-02 | Phase 1 | Complete |
-| SAN-03 | Phase 2 | Pending |
+| SAN-03 | Phase 2 | Complete |
 | WORK-01 | Phase 3 | Pending |
 | WORK-02 | Phase 4 | Pending |
 | CAT-01 | Phase 3 | Pending |

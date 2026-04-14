@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: ready
-stopped_at: Phase 1 verified complete
-last_updated: "2026-04-14T21:38:00.000Z"
-last_activity: 2026-04-14 -- Phase 01 verified complete
+status: executing
+stopped_at: Completed 02-01-PLAN.md
+last_updated: "2026-04-14T22:38:29.276Z"
+last_activity: 2026-04-14
 progress:
   total_phases: 5
   completed_phases: 1
-  total_plans: 3
-  completed_plans: 3
-  percent: 100
+  total_plans: 6
+  completed_plans: 5
+  percent: 83
 ---
 
 # Project State
@@ -21,14 +21,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-04-13)
 
 **Core value:** Editors can manage a polished portfolio gallery through Sanity while visitors browse a cleaner, category-driven Work experience without losing the site's existing aesthetic quality.
-**Current focus:** Phase 02: Data Layer Migration
+**Current focus:** Phase 02 — data-layer-migration
 
 ## Current Position
 
-Phase: 2 of 5 (Data Layer Migration)
-Plan: 0 of 3 in current phase
+Phase: 02 (data-layer-migration) — EXECUTING
+Plan: 2 of 3
 Status: Ready to execute
-Last activity: 2026-04-14 -- Phase 01 verified complete
+Last activity: 2026-04-14
 
 Progress: [██░░░░░░░░] 20%
 
@@ -52,6 +52,7 @@ Progress: [██░░░░░░░░] 20%
 - Trend: Stable
 
 *Updated after each plan completion*
+| Phase 02 P01 | 9min | 2 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -64,6 +65,9 @@ Recent decisions affecting current work:
 - Initialization: Remove legacy `/work/[slug]` detail pages rather than preserving them
 - [Phase 01]: Studio governance combines schema validation, a constrained desk structure, and filtered create options.
 - [Phase 01]: Embedded Studio at `/studio` is verified with three fixed category slots and single-category gallery items.
+- [Phase 02]: WorkCategory and WorkGalleryItem now define the primary Sanity Work contracts, with Project retained only as a temporary overlap bridge.
+- [Phase 02]: Legacy route projections fail closed when slug, title, category, or image data is malformed instead of guessing missing fields.
+- [Phase 02]: Active Work reads now belong in sanity/lib/work.ts while lib/api.ts remains JSON-only for non-Work content.
 
 ### Pending Todos
 
@@ -76,6 +80,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-14T08:06:34.767Z
-Stopped at: Phase 1 verified complete
-Resume file: .planning/phases/02-data-layer-migration
+Last session: 2026-04-14T22:38:29.270Z
+Stopped at: Completed 02-01-PLAN.md
+Resume file: None
