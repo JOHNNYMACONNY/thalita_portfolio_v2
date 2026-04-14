@@ -29,7 +29,7 @@
 
 ### Migration and Cleanup
 
-- [ ] **MIG-01**: Existing markdown portfolio content is migrated into Sanity categories and gallery items with no loss of required images or category assignments
+- [ ] **MIG-01**: The Work experience can start from an intentionally empty Sanity gallery dataset, with editors adding new categories and gallery items manually without relying on legacy markdown photo import
 - [ ] **MIG-02**: Legacy `/work/[slug]` pages, `app/portfolio/page.tsx`, and Decap CMS admin assets are removed after replacement routes are verified
 - [ ] **MIG-03**: Next.js image configuration supports Sanity-hosted images and no longer depends on legacy CMS assumptions for Work content
 

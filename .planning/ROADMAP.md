@@ -13,7 +13,7 @@ This roadmap moves the existing portfolio from markdown-backed project pages to 
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Sanity Foundation** - Add Sanity Studio, schema, and client configuration for category and gallery item content
-- [ ] **Phase 2: Data Layer Migration** - Replace markdown portfolio reads with Sanity queries and import legacy content
+- [ ] **Phase 2: Data Layer Migration** - Replace markdown portfolio reads with Sanity queries and establish a fresh-start Work dataset workflow
 - [ ] **Phase 3: Category Work Experience** - Build the new Work landing page and category gallery routes
 - [ ] **Phase 4: Home Curation And Navigation** - Shift homepage Work content to curated gallery items and repoint navigation
 - [ ] **Phase 5: Legacy CMS Removal** - Remove old project routes, Decap CMS, and leftover Work-specific legacy dependencies
@@ -36,19 +36,19 @@ Plans:
 - [x] 01-03-PLAN.md — Add env/setup docs and verify embedded Studio access
 
 ### Phase 2: Data Layer Migration
-**Goal**: The Work content source moves from local markdown parsing to Sanity queries, and legacy content is imported into the new model.
+**Goal**: The Work content source moves from local markdown parsing to Sanity queries, and the app supports a fresh-start Sanity dataset without requiring legacy photo import.
 **Depends on**: Phase 1
 **Requirements**: SAN-03, MIG-01
 **Success Criteria** (what must be TRUE):
 1. Next.js data helpers can fetch visible categories and gallery items from Sanity
-2. Existing markdown portfolio content has been migrated into Sanity with preserved category assignments and required imagery
-3. The app no longer depends on `content/projects/*.md` for active Work data
+2. The Work data layer and current overlap routes behave correctly when the Sanity dataset starts with zero gallery items
+3. Editors have a documented workflow for starting fresh in Sanity and adding new gallery items manually
 **Plans**: 3 plans
 
 Plans:
 - [ ] 02-01-PLAN.md — Move active Work reads to Sanity helpers while preserving the overlap routes
-- [ ] 02-02-PLAN.md — Build the deterministic markdown-to-Sanity import flow and mapping manifest
-- [ ] 02-03-PLAN.md — Audit imported content completeness and document the migration runbook
+- [ ] 02-02-PLAN.md — Replace legacy import assumptions with a fresh-start dataset bootstrap and approval flow
+- [ ] 02-03-PLAN.md — Audit fresh-start data behavior and document the manual editorial workflow
 
 ### Phase 3: Category Work Experience
 **Goal**: Visitors can browse Work through a landing page of category cards and category-specific image galleries.

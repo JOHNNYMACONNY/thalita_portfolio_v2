@@ -68,6 +68,7 @@ Recent decisions affecting current work:
 - [Phase 02]: WorkCategory and WorkGalleryItem now define the primary Sanity Work contracts, with Project retained only as a temporary overlap bridge.
 - [Phase 02]: Legacy route projections fail closed when slug, title, category, or image data is malformed instead of guessing missing fields.
 - [Phase 02]: Active Work reads now belong in sanity/lib/work.ts while lib/api.ts remains JSON-only for non-Work content.
+- [Phase 02]: The Work dataset will start fresh in Sanity with no legacy photo import; future gallery items will be added manually in Studio.
 
 ### Pending Todos
 
@@ -76,7 +77,7 @@ None yet.
 ### Blockers/Concerns
 
 - Final canonical names, slugs, and cover images for the three categories still need editorial confirmation
-- Need a concrete migration rule for whether every legacy gallery image becomes its own `galleryItem` or only selected images do
+- Need a later CMS phase for non-Work editorial images such as the About/profile photo
 
 ## Session Continuity
 
