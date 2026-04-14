@@ -5,13 +5,18 @@ import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProjectNavigation from "@/components/ProjectNavigation";
-import { getProjects, getSiteSettings } from "@/lib/api";
+import { getSiteSettings } from "@/lib/api";
+import {
+    getLegacyProjectBySlugFromSanity,
+    getLegacyProjectsFromSanity,
+    getLegacyProjectSlugsFromSanity,
+} from "@/sanity/lib/work";
 
 // Generate static params for all projects
 export async function generateStaticParams() {
-    const projects = getProjects();
-    return projects.map((project) => ({
-        slug: project.slug,
+    const slugs = await getLegacyProjectSlugsFromSanity();
+    return slugs.map((slug) => ({
+        slug,
     }));
 }
 
@@ -21,19 +26,20 @@ export default async function ProjectDetail({
     params: Promise<{ slug: string }>;
 }) {
     const slug = (await params).slug;
-    const allProjects = getProjects();
+    const [project, allProjects] = await Promise.all([
+        getLegacyProjectBySlugFromSanity(slug),
+        getLegacyProjectsFromSanity(),
+    ]);
     const siteSettings = getSiteSettings();
-    const projectIndex = allProjects.findIndex(p => p.slug === slug);
-    const project = allProjects[projectIndex];
-
-    const nextProject = projectIndex >= 0 && projectIndex < allProjects.length - 1
-        ? allProjects[projectIndex + 1]
-        : null;
 
     if (!project) {
         notFound();
     }
 
+    const projectIndex = allProjects.findIndex(p => p.slug === slug);
+    const nextProject = projectIndex >= 0 && projectIndex < allProjects.length - 1
+        ? allProjects[projectIndex + 1]
+        : null;
     const otherImages = project.images;
 
     return (
@@ -59,30 +65,38 @@ export default async function ProjectDetail({
                             {project.title}
                         </h1>
                         <div className="space-y-8 text-charcoal/80 leading-relaxed max-w-lg">
-                            <p className="text-xl md:text-2xl font-light">{project.description}</p>
+                            {project.description && (
+                                <p className="text-xl md:text-2xl font-light">{project.description}</p>
+                            )}
 
                             {/* Role / Client / Year */}
                             <div className="grid grid-cols-2 gap-x-8 gap-y-8 py-8 border-t border-charcoal/30">
-                                <div>
-                                    <h3 className="text-[10px] uppercase tracking-[0.2em] font-bold text-charcoal/40 mb-2">Role</h3>
-                                    <p className="text-sm font-medium">{project.role}</p>
-                                </div>
+                                {project.role && (
+                                    <div>
+                                        <h3 className="text-[10px] uppercase tracking-[0.2em] font-bold text-charcoal/40 mb-2">Role</h3>
+                                        <p className="text-sm font-medium">{project.role}</p>
+                                    </div>
+                                )}
                                 {project.client && (
                                     <div>
                                         <h3 className="text-[10px] uppercase tracking-[0.2em] font-bold text-charcoal/40 mb-2">Client</h3>
                                         <p className="text-sm font-medium">{project.client}</p>
                                     </div>
                                 )}
-                                <div>
-                                    <h3 className="text-[10px] uppercase tracking-[0.2em] font-bold text-charcoal/40 mb-2">Year</h3>
-                                    <p className="text-sm font-medium">{project.year}</p>
-                                </div>
-                                <div>
-                                    <h3 className="text-[10px] uppercase tracking-[0.2em] font-bold text-charcoal/40 mb-2">Categories</h3>
-                                    <div className="text-sm font-medium">
-                                        {project.categories.join(", ")}
+                                {project.year && (
+                                    <div>
+                                        <h3 className="text-[10px] uppercase tracking-[0.2em] font-bold text-charcoal/40 mb-2">Year</h3>
+                                        <p className="text-sm font-medium">{project.year}</p>
                                     </div>
-                                </div>
+                                )}
+                                {project.categories.length > 0 && (
+                                    <div>
+                                        <h3 className="text-[10px] uppercase tracking-[0.2em] font-bold text-charcoal/40 mb-2">Categories</h3>
+                                        <div className="text-sm font-medium">
+                                            {project.categories.join(", ")}
+                                        </div>
+                                    </div>
+                                )}
                             </div>
 
                             {/* Credits */}

@@ -100,6 +100,7 @@ export interface LegacyProjectBridge {
     slug: string;
     title: string;
     client?: string;
+    featuredOrder?: number;
     role: string;
     year: string;
     description: string;
