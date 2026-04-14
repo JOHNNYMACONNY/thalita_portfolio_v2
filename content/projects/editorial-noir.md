@@ -12,6 +12,8 @@ youtubeUrl: ""
 gallery:
   - src: /images/uploads/_dsf2557.jpg
     alt: Close up of fabric texture
+  - src: /images/uploads/_dsf2560.jpg
+    alt: " "
 credits:
   - role: Photographer
     name: Palu Bertissolli
