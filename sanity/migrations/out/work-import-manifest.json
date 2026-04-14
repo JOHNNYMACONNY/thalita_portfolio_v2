@@ -1,0 +1,332 @@
+{
+  "generatedAt": "2026-04-14T22:44:29.015Z",
+  "dryRun": true,
+  "strict": true,
+  "summary": {
+    "projects": 4,
+    "manifestRows": 6,
+    "approvalRequired": true,
+    "categoryCounts": {
+      "work-category-1": 2,
+      "work-category-2": 3,
+      "work-category-3": 1
+    }
+  },
+  "categorySlots": [
+    {
+      "id": "work-category-1",
+      "proposedTitle": "Editorial",
+      "proposedSlug": "editorial",
+      "legacyLabels": [
+        "Editorial"
+      ],
+      "approvalReason": "Phase 1 left slot 1 title/slug editor-authored, so the live Studio document still needs confirmation."
+    },
+    {
+      "id": "work-category-2",
+      "proposedTitle": "Commercial",
+      "proposedSlug": "commercial",
+      "legacyLabels": [
+        "Commercial"
+      ],
+      "approvalReason": "Phase 1 left slot 2 title/slug editor-authored, so the live Studio document still needs confirmation."
+    },
+    {
+      "id": "work-category-3",
+      "proposedTitle": "Personal Styling",
+      "proposedSlug": "personal-styling",
+      "legacyLabels": [
+        "Lookbook",
+        "Personal Styling"
+      ],
+      "approvalReason": "The legacy taxonomy includes `Lookbook`, but the fixed three-slot model does not; the collapse into slot 3 needs editorial confirmation."
+    }
+  ],
+  "approval": {
+    "needsApproval": true,
+    "reasons": [
+      "Confirm work-category-1 in Studio still represents \"Editorial\" with slug \"editorial\". Phase 1 left slot 1 title/slug editor-authored, so the live Studio document still needs confirmation.",
+      "Confirm work-category-2 in Studio still represents \"Commercial\" with slug \"commercial\". Phase 1 left slot 2 title/slug editor-authored, so the live Studio document still needs confirmation.",
+      "Confirm work-category-3 in Studio still represents \"Personal Styling\" with slug \"personal-styling\". The legacy taxonomy includes `Lookbook`, but the fixed three-slot model does not; the collapse into slot 3 needs editorial confirmation.",
+      "Confirm the explicit slug override for \"editorial-noir\" to \"work-category-1\" before import.",
+      "Confirm editorial-noir maps to work-category-1. Legacy categories `Editorial` + `Lookbook` span two canonical slots. This slug is tentatively assigned to slot 1 because the project is editorial-first, but that assignment must be approved before import."
+    ],
+    "checklist": [
+      "Open `/studio` and inspect category documents `work-category-1`, `work-category-2`, and `work-category-3`.",
+      "Confirm the live title and slug for each slot still match the proposed mapping in `sanity/migrations/work-category-map.ts`.",
+      "Confirm that legacy `Lookbook` content belongs in slot 3 rather than another canonical slot.",
+      "Confirm the explicit `editorial-noir` override to `work-category-1`, or provide the replacement slot/document ID.",
+      "Review sanity/migrations/out/work-import-manifest.json and confirm each of the 6 image rows is present with the expected category and homepage flag."
+    ]
+  },
+  "rows": [
+    {
+      "_id": "galleryItem_editorial_noir_cover_0_public_images_gallery_1_j_0aed45e0b2",
+      "legacyProjectSlug": "editorial-noir",
+      "legacyProjectTitle": "Editorial Noir",
+      "legacySourceFile": "content/projects/editorial-noir.md",
+      "legacyImageRole": "cover",
+      "legacyImageIndex": 0,
+      "categoryId": "work-category-1",
+      "categoryResolutionKind": "slug-override",
+      "categoryResolutionReason": "Legacy categories `Editorial` + `Lookbook` span two canonical slots. This slug is tentatively assigned to slot 1 because the project is editorial-first, but that assignment must be approved before import.",
+      "categoryNeedsApproval": true,
+      "sourceCategories": [
+        "Editorial",
+        "Lookbook"
+      ],
+      "sourceImage": "/images/gallery-1.jpg",
+      "resolvedImage": "public/images/gallery-1.jpg",
+      "title": "Editorial Noir Cover",
+      "alt": "Model in black structured jacket",
+      "altSource": "source",
+      "isVisible": true,
+      "showOnHomePage": true,
+      "homePageOrder": 1,
+      "importDocument": {
+        "_id": "galleryItem_editorial_noir_cover_0_public_images_gallery_1_j_0aed45e0b2",
+        "_type": "galleryItem",
+        "title": "Editorial Noir Cover",
+        "image": {
+          "_type": "image",
+          "_sanityAsset": "image@file:///Volumes/YBF_Storage/Projects/Thali/thalita_portfolio/public/images/gallery-1.jpg"
+        },
+        "alt": "Model in black structured jacket",
+        "category": {
+          "_type": "reference",
+          "_ref": "work-category-1"
+        },
+        "isVisible": true,
+        "showOnHomePage": true,
+        "legacyProjectSlug": "editorial-noir",
+        "legacyProjectTitle": "Editorial Noir",
+        "legacySourceFile": "content/projects/editorial-noir.md",
+        "legacyImageRole": "cover",
+        "homePageOrder": 1,
+        "legacyFeaturedOrder": 1
+      }
+    },
+    {
+      "_id": "galleryItem_editorial_noir_gallery_0_public_images_gallery_2_ccc5058a0b",
+      "legacyProjectSlug": "editorial-noir",
+      "legacyProjectTitle": "Editorial Noir",
+      "legacySourceFile": "content/projects/editorial-noir.md",
+      "legacyImageRole": "gallery",
+      "legacyImageIndex": 0,
+      "categoryId": "work-category-1",
+      "categoryResolutionKind": "slug-override",
+      "categoryResolutionReason": "Legacy categories `Editorial` + `Lookbook` span two canonical slots. This slug is tentatively assigned to slot 1 because the project is editorial-first, but that assignment must be approved before import.",
+      "categoryNeedsApproval": true,
+      "sourceCategories": [
+        "Editorial",
+        "Lookbook"
+      ],
+      "sourceImage": "/images/gallery-2.jpg",
+      "resolvedImage": "public/images/gallery-2.jpg",
+      "title": "Editorial Noir Gallery 1",
+      "alt": "Close up of fabric texture",
+      "altSource": "source",
+      "isVisible": true,
+      "showOnHomePage": false,
+      "importDocument": {
+        "_id": "galleryItem_editorial_noir_gallery_0_public_images_gallery_2_ccc5058a0b",
+        "_type": "galleryItem",
+        "title": "Editorial Noir Gallery 1",
+        "image": {
+          "_type": "image",
+          "_sanityAsset": "image@file:///Volumes/YBF_Storage/Projects/Thali/thalita_portfolio/public/images/gallery-2.jpg"
+        },
+        "alt": "Close up of fabric texture",
+        "category": {
+          "_type": "reference",
+          "_ref": "work-category-1"
+        },
+        "isVisible": true,
+        "showOnHomePage": false,
+        "legacyProjectSlug": "editorial-noir",
+        "legacyProjectTitle": "Editorial Noir",
+        "legacySourceFile": "content/projects/editorial-noir.md",
+        "legacyImageRole": "gallery",
+        "legacyFeaturedOrder": 1
+      }
+    },
+    {
+      "_id": "galleryItem_mariko_daisy_ep_2025_cover_0_public_images_uploa_f34cf966a5",
+      "legacyProjectSlug": "mariko-daisy-ep-2025",
+      "legacyProjectTitle": "Mariko Daisy EP 2025",
+      "legacySourceFile": "content/projects/mariko-daisy-ep-2025.md",
+      "legacyImageRole": "cover",
+      "legacyImageIndex": 0,
+      "categoryId": "work-category-2",
+      "categoryResolutionKind": "legacy-label",
+      "categoryResolutionReason": "Mapped legacy category \"Commercial\" to work-category-2.",
+      "categoryNeedsApproval": false,
+      "sourceCategories": [
+        "Commercial"
+      ],
+      "sourceImage": "/images/uploads/img_8419.jpg",
+      "resolvedImage": "public/images/uploads/img_8419.jpg",
+      "title": "Mariko Daisy EP 2025 Cover",
+      "alt": "Mariko Daisy EP 2025 cover image",
+      "altSource": "derived",
+      "isVisible": true,
+      "showOnHomePage": true,
+      "homePageOrder": 1,
+      "importDocument": {
+        "_id": "galleryItem_mariko_daisy_ep_2025_cover_0_public_images_uploa_f34cf966a5",
+        "_type": "galleryItem",
+        "title": "Mariko Daisy EP 2025 Cover",
+        "image": {
+          "_type": "image",
+          "_sanityAsset": "image@file:///Volumes/YBF_Storage/Projects/Thali/thalita_portfolio/public/images/uploads/img_8419.jpg"
+        },
+        "alt": "Mariko Daisy EP 2025 cover image",
+        "category": {
+          "_type": "reference",
+          "_ref": "work-category-2"
+        },
+        "isVisible": true,
+        "showOnHomePage": true,
+        "legacyProjectSlug": "mariko-daisy-ep-2025",
+        "legacyProjectTitle": "Mariko Daisy EP 2025",
+        "legacySourceFile": "content/projects/mariko-daisy-ep-2025.md",
+        "legacyImageRole": "cover",
+        "homePageOrder": 1,
+        "legacyFeaturedOrder": 1
+      }
+    },
+    {
+      "_id": "galleryItem_personal_elevation_cover_0_public_images_hero_fa_48afa781ba",
+      "legacyProjectSlug": "personal-elevation",
+      "legacyProjectTitle": "Personal Elevation",
+      "legacySourceFile": "content/projects/personal-elevation.md",
+      "legacyImageRole": "cover",
+      "legacyImageIndex": 0,
+      "categoryId": "work-category-3",
+      "categoryResolutionKind": "legacy-label",
+      "categoryResolutionReason": "Mapped legacy category \"Lookbook\" to work-category-3.",
+      "categoryNeedsApproval": false,
+      "sourceCategories": [
+        "Lookbook"
+      ],
+      "sourceImage": "/images/hero-fashion.png",
+      "resolvedImage": "public/images/hero-fashion.png",
+      "title": "Personal Elevation Cover",
+      "alt": "Personal Elevation cover image",
+      "altSource": "derived",
+      "isVisible": true,
+      "showOnHomePage": true,
+      "homePageOrder": 3,
+      "importDocument": {
+        "_id": "galleryItem_personal_elevation_cover_0_public_images_hero_fa_48afa781ba",
+        "_type": "galleryItem",
+        "title": "Personal Elevation Cover",
+        "image": {
+          "_type": "image",
+          "_sanityAsset": "image@file:///Volumes/YBF_Storage/Projects/Thali/thalita_portfolio/public/images/hero-fashion.png"
+        },
+        "alt": "Personal Elevation cover image",
+        "category": {
+          "_type": "reference",
+          "_ref": "work-category-3"
+        },
+        "isVisible": true,
+        "showOnHomePage": true,
+        "legacyProjectSlug": "personal-elevation",
+        "legacyProjectTitle": "Personal Elevation",
+        "legacySourceFile": "content/projects/personal-elevation.md",
+        "legacyImageRole": "cover",
+        "homePageOrder": 3,
+        "legacyFeaturedOrder": 3
+      }
+    },
+    {
+      "_id": "galleryItem_urban_decay_cover_0_public_images_gallery_2_jpg_8e0cd3682f",
+      "legacyProjectSlug": "urban-decay",
+      "legacyProjectTitle": "Urban Decay",
+      "legacySourceFile": "content/projects/urban-decay.md",
+      "legacyImageRole": "cover",
+      "legacyImageIndex": 0,
+      "categoryId": "work-category-2",
+      "categoryResolutionKind": "legacy-label",
+      "categoryResolutionReason": "Mapped legacy category \"Commercial\" to work-category-2.",
+      "categoryNeedsApproval": false,
+      "sourceCategories": [
+        "Commercial"
+      ],
+      "sourceImage": "/images/gallery-2.jpg",
+      "resolvedImage": "public/images/gallery-2.jpg",
+      "title": "Urban Decay Cover",
+      "alt": "Group shot on concrete stairs",
+      "altSource": "source",
+      "isVisible": true,
+      "showOnHomePage": true,
+      "homePageOrder": 2,
+      "importDocument": {
+        "_id": "galleryItem_urban_decay_cover_0_public_images_gallery_2_jpg_8e0cd3682f",
+        "_type": "galleryItem",
+        "title": "Urban Decay Cover",
+        "image": {
+          "_type": "image",
+          "_sanityAsset": "image@file:///Volumes/YBF_Storage/Projects/Thali/thalita_portfolio/public/images/gallery-2.jpg"
+        },
+        "alt": "Group shot on concrete stairs",
+        "category": {
+          "_type": "reference",
+          "_ref": "work-category-2"
+        },
+        "isVisible": true,
+        "showOnHomePage": true,
+        "legacyProjectSlug": "urban-decay",
+        "legacyProjectTitle": "Urban Decay",
+        "legacySourceFile": "content/projects/urban-decay.md",
+        "legacyImageRole": "cover",
+        "homePageOrder": 2,
+        "legacyFeaturedOrder": 2
+      }
+    },
+    {
+      "_id": "galleryItem_urban_decay_gallery_0_public_images_gallery_1_jp_39320d9468",
+      "legacyProjectSlug": "urban-decay",
+      "legacyProjectTitle": "Urban Decay",
+      "legacySourceFile": "content/projects/urban-decay.md",
+      "legacyImageRole": "gallery",
+      "legacyImageIndex": 0,
+      "categoryId": "work-category-2",
+      "categoryResolutionKind": "legacy-label",
+      "categoryResolutionReason": "Mapped legacy category \"Commercial\" to work-category-2.",
+      "categoryNeedsApproval": false,
+      "sourceCategories": [
+        "Commercial"
+      ],
+      "sourceImage": "/images/gallery-1.jpg",
+      "resolvedImage": "public/images/gallery-1.jpg",
+      "title": "Urban Decay Gallery 1",
+      "alt": "Model 1 solo shot",
+      "altSource": "source",
+      "isVisible": true,
+      "showOnHomePage": false,
+      "importDocument": {
+        "_id": "galleryItem_urban_decay_gallery_0_public_images_gallery_1_jp_39320d9468",
+        "_type": "galleryItem",
+        "title": "Urban Decay Gallery 1",
+        "image": {
+          "_type": "image",
+          "_sanityAsset": "image@file:///Volumes/YBF_Storage/Projects/Thali/thalita_portfolio/public/images/gallery-1.jpg"
+        },
+        "alt": "Model 1 solo shot",
+        "category": {
+          "_type": "reference",
+          "_ref": "work-category-2"
+        },
+        "isVisible": true,
+        "showOnHomePage": false,
+        "legacyProjectSlug": "urban-decay",
+        "legacyProjectTitle": "Urban Decay",
+        "legacySourceFile": "content/projects/urban-decay.md",
+        "legacyImageRole": "gallery",
+        "legacyFeaturedOrder": 2
+      }
+    }
+  ]
+}

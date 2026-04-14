@@ -7,7 +7,9 @@
     "dev:admin": "npx decap-server",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "work:import:dry-run": "tsx sanity/migrations/work-import.ts --dry-run",
+    "work:import:self-test": "tsx sanity/migrations/work-import.ts --self-test"
   },
   "dependencies": {
     "@sanity/image-url": "^2.1.1",
