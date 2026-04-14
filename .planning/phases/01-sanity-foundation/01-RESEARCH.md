@@ -405,17 +405,13 @@ export const galleryItemType = defineType({
 | A2 | Warning-sign language around future custom actions/desk logic presumes those would be unnecessary complexity for this phase. | Common Pitfalls | Planner may deprioritize restrictions the user actually wants in Phase 1. |
 | A3 | Sanity-hosted access control on the Free plan is sufficient for the two-admin setup without extra role modeling work in this phase. | Security Domain | Planner may miss permission setup work if the account/project reality differs from the discussion decision. |
 
-## Open Questions
+## Open Questions (RESOLVED)
 
 1. **Should Phase 1 hard-block creation of a fourth category, or is setup + manual verification enough?**
-   - What we know: The user locked "exactly three canonical categories," but did not lock a Studio UX for enforcing that count. [VERIFIED: .planning/phases/01-sanity-foundation/01-CONTEXT.md]
-   - What's unclear: Whether the planner should include custom desk/create-menu restrictions now. [ASSUMED]
-   - Recommendation: Default to setup + verification only; escalate only if the user wants strict Studio-side prevention in Phase 1. [ASSUMED]
+   - Resolution: Phase 1 should enforce the three-category workflow through Studio structure and plan verification, not merely through setup notes. The phase plans should prevent an open-ended extra-category creation path so the editor experience matches the locked "exactly three canonical categories" decision. [VERIFIED: .planning/phases/01-sanity-foundation/01-CONTEXT.md] [RESOLVED]
 
 2. **Will the three category names/slugs be chosen during implementation or supplied separately by the editor?**
-   - What we know: Names/slugs are intentionally not locked yet. [VERIFIED: .planning/phases/01-sanity-foundation/01-CONTEXT.md]
-   - What's unclear: Whether category documents should be seeded automatically or created manually during verification. [ASSUMED]
-   - Recommendation: Plan for manual creation in Phase 1 verification unless the user provides canonical names before execution. [ASSUMED]
+   - Resolution: The schema should support editor-authored category names and slugs, and Phase 1 should treat category creation as a manual verification/setup step rather than automatic seeding. This stays aligned with the context decision that names/slugs are not locked yet. [VERIFIED: .planning/phases/01-sanity-foundation/01-CONTEXT.md] [RESOLVED]
 
 ## Environment Availability
 
