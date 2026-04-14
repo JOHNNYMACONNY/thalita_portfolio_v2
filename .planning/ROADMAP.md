@@ -46,9 +46,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 02-01: Refactor shared types and data helpers to use Sanity for Work content
-- [ ] 02-02: Create and run a one-off migration path from markdown content into Sanity documents
-- [ ] 02-03: Verify migrated content completeness and document any manual editorial cleanup needed
+- [ ] 02-01-PLAN.md — Move active Work reads to Sanity helpers while preserving the overlap routes
+- [ ] 02-02-PLAN.md — Build the deterministic markdown-to-Sanity import flow and mapping manifest
+- [ ] 02-03-PLAN.md — Audit imported content completeness and document the migration runbook
 
 ### Phase 3: Category Work Experience
 **Goal**: Visitors can browse Work through a landing page of category cards and category-specific image galleries.
