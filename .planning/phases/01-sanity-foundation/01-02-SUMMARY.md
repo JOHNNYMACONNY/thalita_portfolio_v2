@@ -65,7 +65,7 @@ Each task was committed atomically:
 - `sanity/schemaTypes/documents/galleryItem.ts` - Defines image-centric gallery items with visibility and homepage curation controls.
 - `sanity/schemaTypes/index.ts` - Registers both new schema types for Studio loading.
 - `sanity/structure.ts` - Creates the constrained desk structure with fixed category slots and a gallery item section.
-- `sanity.config.ts` - Wires `structureTool` and hides generic category creation from the global create menu.
+- `sanity.config.ts` - Wires `structureTool`, hides generic category creation from the global create menu, and marks the Studio config as client-side for production builds.
 
 ## Decisions Made
 - Used fixed category document IDs in the desk structure so the three approved category slots remain explicit in the Studio UI.
@@ -90,7 +90,8 @@ Each task was committed atomically:
 **Impact on plan:** The cleanup only restored verification reliability. Source behavior stayed within plan scope.
 
 ## Issues Encountered
-- `npm run build` fails while collecting page data for `/studio/[[...tool]]` with `TypeError: bc.default.createContext is not a function`. The failure is in the existing embedded Studio route/runtime introduced by Plan `01-01`, not in the new schema or desk structure files added here.
+- `npm run build` initially failed while collecting page data for `/studio/[[...tool]]` with `TypeError: bc.default.createContext is not a function`.
+- The issue was resolved by adding `'use client'` to `sanity.config.ts`, which matches Sanity's embedded Studio guidance for client-side config files.
 
 ## User Setup Required
 
@@ -98,7 +99,7 @@ None - no additional external setup was introduced by this plan beyond the Sanit
 
 ## Next Phase Readiness
 - The repo now has the category and gallery item CMS model needed for migration work in Phase 2.
-- Before relying on production builds, the embedded Studio route build failure at `/studio/[[...tool]]` should be resolved in a follow-up within the Sanity foundation phase.
+- Production builds now complete successfully with the embedded Studio route and constrained schema governance in place.
 
 ---
 *Phase: 01-sanity-foundation*

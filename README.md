@@ -22,6 +22,48 @@ A clean, minimalist portfolio website for Thalita Bueno, built with Next.js, Tai
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Sanity Studio setup
+
+Phase 1 embeds Sanity Studio directly in this Next.js app at `/studio`. The Studio uses public Sanity project identifiers from `.env.local` and shares the repo-local config in `sanity.config.ts`, `sanity.cli.ts`, and `sanity/schemaTypes`.
+
+### Environment variables
+
+Start from `.env.example` and add these values to `.env.local`:
+
+- `NEXT_PUBLIC_SANITY_PROJECT_ID`: Your Sanity project ID.
+- `NEXT_PUBLIC_SANITY_DATASET`: The dataset the Studio should read and write, usually `production`.
+- `NEXT_PUBLIC_SANITY_API_VERSION`: API version for the shared client and embedded Studio. Phase 1 defaults to `2026-03-01`.
+
+Only public identifiers belong in tracked examples. Do not add tokens, write secrets, or private credentials to `.env.example`.
+
+### Local setup
+
+1. Install dependencies with `npm install`.
+2. Copy `.env.example` into `.env.local` and fill in the real Sanity project ID and dataset.
+3. Run `npm run dev`.
+4. Open [http://localhost:3000/studio](http://localhost:3000/studio).
+5. Sign in with a Sanity account that has access to the connected project.
+
+### CORS and authenticated origins
+
+The embedded Studio depends on Sanity project settings outside the repo. In Sanity Manage, add both your local origin and deployed site origin to CORS and enable authenticated requests for those origins. For local development, this usually includes `http://localhost:3000`. Without these settings, `/studio` may load but authentication and document operations can fail.
+
+### Sanity access model
+
+Phase 1 assumes two Administrator users on Sanity's Free plan for Thalita and her collaborator. Custom roles, custom permissions, and any extra repo-side permission modeling are intentionally out of scope for this phase.
+
+### Manual verification checklist
+
+1. Run `npm run dev`.
+2. Open `/studio` and confirm the Studio shell loads.
+3. Authenticate successfully with a Sanity Administrator account.
+4. Confirm the top-level Studio navigation shows `Work Categories` and `Gallery Items`.
+5. Create or edit category documents and confirm the workflow is limited to three category slots total.
+6. For each category, confirm the document supports `title`, `slug`, `description`, `coverImage`, required cover-image `alt`, and `displayOrder`.
+7. Create or edit a `galleryItem` document and confirm it supports `image`, `alt`, one `category` reference, `isVisible`, and `showOnHomePage`.
+8. Turn on `showOnHomePage` and confirm `homePageOrder` appears; turn it off and confirm that field is hidden again.
+9. Confirm the workflow does not expose a multi-category assignment path for gallery items.
+
 ## 🛠 Tech Stack
 
 - **Framework**: [Next.js](https://nextjs.org/) (App Router)
@@ -39,7 +81,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## 📝 Roadmap & Status
 
-See [.gsd/ROADMAP.md](.gsd/ROADMAP.md) for detailed granular progress.
+See [.planning/ROADMAP.md](.planning/ROADMAP.md) for detailed granular progress.
 
 - [x] **Source Code Recovery & Hardening**
 - [x] **Visual Redesign (Editorial Elevation)**
