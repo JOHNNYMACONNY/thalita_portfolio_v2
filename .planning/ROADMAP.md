@@ -12,7 +12,7 @@ This roadmap moves the existing portfolio from markdown-backed project pages to 
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Sanity Foundation** - Add Sanity Studio, schema, and client configuration for category and gallery item content
+- [x] **Phase 1: Sanity Foundation** - Add Sanity Studio, schema, and client configuration for category and gallery item content
 - [ ] **Phase 2: Data Layer Migration** - Replace markdown portfolio reads with Sanity queries and import legacy content
 - [ ] **Phase 3: Category Work Experience** - Build the new Work landing page and category gallery routes
 - [ ] **Phase 4: Home Curation And Navigation** - Shift homepage Work content to curated gallery items and repoint navigation
@@ -33,7 +33,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 Plans:
 - [x] 01-01-PLAN.md — Install Sanity dependencies and add embedded Studio/client foundation files
 - [x] 01-02-PLAN.md — Define category and gallery item schemas plus three-category Studio governance
-- [ ] 01-03-PLAN.md — Add env/setup docs and verify embedded Studio access
+- [x] 01-03-PLAN.md — Add env/setup docs and verify embedded Studio access
 
 ### Phase 2: Data Layer Migration
 **Goal**: The Work content source moves from local markdown parsing to Sanity queries, and legacy content is imported into the new model.
@@ -102,7 +102,7 @@ Phases execute in numeric order: 2 → 2.1 → 2.2 → 3 → 3.1 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Sanity Foundation | 0/3 | Not started | - |
+| 1. Sanity Foundation | 3/3 | Complete | 2026-04-14 |
 | 2. Data Layer Migration | 0/3 | Not started | - |
 | 3. Category Work Experience | 0/3 | Not started | - |
 | 4. Home Curation And Navigation | 0/3 | Not started | - |
