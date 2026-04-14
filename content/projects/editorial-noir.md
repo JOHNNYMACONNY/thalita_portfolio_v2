@@ -1,27 +1,30 @@
 ---
-title: Editorial Noir
-slug: editorial-noir
-date: 2024-01-01T00:00:00.000Z
-isFeatured: true
-featuredOrder: 1
+title: Concept Photoshoot
+slug: concept-1
+client: tired woman
+role: Lead Stylist
+year: "2024"
 categories:
   - Editorial
   - Lookbook
-youtubeUrl: https://www.youtube.com/watch?v=dQw4w9WgXcQ
-client: Vogue Italia (Concept)
-role: Lead Stylist
-year: "2024"
 coverImage: /images/gallery-1.jpg
-coverAlt: Model in black structured jacket
+youtubeUrl: ""
+gallery:
+  - src: /images/uploads/_dsf2557.jpg
+    alt: Close up of fabric texture
+  - src: /images/uploads/_dsf2557.jpg
+    alt: na
 credits:
   - role: Photographer
-    name: Sarah Jenkins
+    name: Palu Bertissolli
   - role: Model
-    name: Aria D.
+    name: Ghia Sirana
   - role: Makeup
     name: Leo M.
-gallery:
-  - src: /images/gallery-2.jpg
-    alt: Close up of fabric texture
+isHidden: true
+isFeatured: true
+featuredOrder: 1
+date: 2024-01-01T00:00:00.000Z
+coverAlt: Model in black structured jacket
 ---
-A dark, moody exploration of texture and silhouette. This editorial focuses on the interplay between light and shadow, featuring avant-garde pieces from emerging designers.
+na
