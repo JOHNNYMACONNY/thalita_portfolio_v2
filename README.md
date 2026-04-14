@@ -64,6 +64,26 @@ Phase 1 assumes two Administrator users on Sanity's Free plan for Thalita and he
 8. Turn on `showOnHomePage` and confirm `homePageOrder` appears; turn it off and confirm that field is hidden again.
 9. Confirm the workflow does not expose a multi-category assignment path for gallery items.
 
+## Phase 2 fresh start workflow
+
+Phase 2 intentionally starts the Work dataset from zero imported photos. The approved fresh-start receipt is tracked in `.planning/phases/02-data-layer-migration/02-FRESH-START-RECEIPT.md`, and the corresponding helper audit is tracked in `.planning/phases/02-data-layer-migration/02-FRESH-START-AUDIT.md`.
+
+### Operator runbook
+
+1. Ensure `.env.local` contains the Sanity public identifiers, or export `NEXT_PUBLIC_SANITY_PROJECT_ID` and `NEXT_PUBLIC_SANITY_DATASET` in your shell.
+2. Verify the current dataset state with `npm run work:fresh-start -- --dry-run --strict --receipt .planning/phases/02-data-layer-migration/02-FRESH-START-RECEIPT.md`.
+3. Re-run the helper audit with `npx tsx sanity/migrations/work-audit.ts --report .planning/phases/02-data-layer-migration/02-FRESH-START-AUDIT.md --strict`.
+4. Treat `work:fresh-start` as the expected Phase 2 state even if the dataset still has `0` gallery items and `0` seeded category documents.
+5. Keep the gallery empty initially; do not import legacy markdown photos into Sanity.
+6. Add future Work images manually in Studio as `galleryItem` documents when editorially ready.
+7. Seed or publish the three Work categories in Studio when editorial confirmation is complete, then re-run the receipt and audit commands to capture the updated state.
+
+### Scope guardrails
+
+- `work-audit` verifies the app-facing Sanity helper layer against the current dataset and checks that empty-state reads remain stable.
+- The About/profile image should be handled in a later About/site-settings CMS phase, not through Work categories or Work gallery items.
+- Non-Work content in `content/settings` remains unchanged during this Phase 2 fresh start.
+
 ## 🛠 Tech Stack
 
 - **Framework**: [Next.js](https://nextjs.org/) (App Router)
