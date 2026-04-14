@@ -31,9 +31,9 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 3 plans
 
 Plans:
-- [ ] 01-01: Install Sanity dependencies and add Studio/client configuration files
-- [ ] 01-02: Define and register `category` and `galleryItem` schema types
-- [ ] 01-03: Add environment documentation and baseline Studio access verification
+- [ ] 01-01-PLAN.md — Install Sanity dependencies and add embedded Studio/client foundation files
+- [ ] 01-02-PLAN.md — Define category and gallery item schemas plus three-category Studio governance
+- [ ] 01-03-PLAN.md — Add env/setup docs and verify embedded Studio access
 
 ### Phase 2: Data Layer Migration
 **Goal**: The Work content source moves from local markdown parsing to Sanity queries, and legacy content is imported into the new model.
