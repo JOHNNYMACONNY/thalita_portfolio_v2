@@ -178,15 +178,24 @@ export async function getWorkCategories(): Promise<WorkCategory[]> {
         Boolean(category.coverImage?.asset?._ref)
       );
     })
-    .map((category) => ({
-      id: category._id,
-      title: category.title,
-      slug: category.slug,
-      description: category.description,
-      displayOrder: category.displayOrder,
-      coverImage: category.coverImage,
-      coverAlt: category.coverAlt,
-    }));
+    .map((category) => {
+      const coverImageUrl = toImageUrl(category.coverImage);
+      if (!coverImageUrl) {
+        return null;
+      }
+
+      return {
+        id: category._id,
+        title: category.title,
+        slug: category.slug,
+        description: category.description,
+        displayOrder: category.displayOrder,
+        coverImage: category.coverImage,
+        coverImageUrl,
+        coverAlt: category.coverAlt,
+      };
+    })
+    .filter((category): category is WorkCategory => category !== null);
 }
 
 export async function getHomeGalleryItems(): Promise<WorkGalleryItem[]> {
