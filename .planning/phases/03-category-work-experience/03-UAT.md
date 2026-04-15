@@ -67,10 +67,10 @@ This UAT is intentionally split between:
 
 ### Zero-Item Review
 
-- Date:
-- Reviewer:
-- Result:
-- Notes:
+- Date: 2026-04-15
+- Reviewer: Codex browser check via Playwright
+- Result: PASS for `/work`, `/work/editorial`, `/work/commercial`, and `/work/personal-styling`
+- Notes: `/work` rendered the three expected category cards. Each category route rendered clear category identity and intentional zero-item copy. Console output on the Phase 3 routes was limited to normal React DevTools/HMR development messages; the `PortfolioGrid received 0 projects` error reproduced only on `/`, which remains the Phase 4 homepage migration path.
 
 ### Live-Item Review
 
