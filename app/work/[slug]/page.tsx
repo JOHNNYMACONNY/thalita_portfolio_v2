@@ -58,6 +58,7 @@ export default async function WorkCategoryPage({
               {category.description}
             </p>
             <div className="flex flex-wrap gap-4 border-t border-charcoal/10 pt-5 text-[11px] uppercase tracking-[0.28em] text-charcoal/45">
+              <span>{galleryItems.length === 0 ? "Awaiting first publication" : "Published selection"}</span>
               <span>{galleryItems.length} visible image{galleryItems.length === 1 ? "" : "s"}</span>
               <span>/work/{category.slug}</span>
             </div>

@@ -38,18 +38,43 @@ export default function WorkGalleryGrid({ category, items }: WorkGalleryGridProp
   }
 
   return (
-    <section className="grid grid-cols-1 gap-1">
+    <section className="grid grid-cols-1 gap-1 md:grid-cols-12">
       {items.map((item, index) => {
+        const layoutClass =
+          items.length === 1
+            ? "md:col-span-12"
+            : index % 5 === 0
+              ? "md:col-span-7"
+              : index % 5 === 1
+                ? "md:col-span-5"
+                : index % 5 === 2
+                  ? "md:col-span-5"
+                  : index % 5 === 3
+                    ? "md:col-span-7"
+                    : "md:col-span-12";
         const aspectClass =
-          index % 4 === 0 ? "aspect-[4/5]" : index % 4 === 1 ? "aspect-[5/4]" : "aspect-[4/3]";
+          items.length === 1
+            ? "aspect-[4/5] md:aspect-[16/10]"
+            : index % 5 === 0
+              ? "aspect-[4/5] md:aspect-[4/5]"
+              : index % 5 === 1
+                ? "aspect-[5/4] md:aspect-[5/6]"
+                : index % 5 === 2
+                  ? "aspect-[4/3] md:aspect-[5/4]"
+                  : index % 5 === 3
+                    ? "aspect-[4/5] md:aspect-[16/10]"
+                    : "aspect-[4/3] md:aspect-[18/9]";
 
         return (
-          <figure key={item.id} className={`group relative w-full overflow-hidden ${aspectClass}`}>
+          <figure
+            key={item.id}
+            className={`group relative w-full overflow-hidden ${layoutClass} ${aspectClass}`}
+          >
             <Image
               src={item.imageUrl}
               alt={item.alt}
               fill
-              sizes="(max-width: 768px) 100vw, 88vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 88vw"
               className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.01]"
               priority={index === 0}
             />
