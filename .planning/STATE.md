@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: verifying
-stopped_at: Completed 02-03-PLAN.md
-last_updated: "2026-04-14T23:32:05.645Z"
-last_activity: 2026-04-14
+status: executing
+stopped_at: Completed 03-02-PLAN.md
+last_updated: "2026-04-15T03:03:07.649Z"
+last_activity: 2026-04-15
 progress:
   total_phases: 5
   completed_phases: 2
-  total_plans: 6
+  total_plans: 15
   completed_plans: 8
-  percent: 100
+  percent: 53
 ---
 
 # Project State
@@ -21,40 +21,44 @@ progress:
 See: .planning/PROJECT.md (updated 2026-04-13)
 
 **Core value:** Editors can manage a polished portfolio gallery through Sanity while visitors browse a cleaner, category-driven Work experience without losing the site's existing aesthetic quality.
-**Current focus:** Phase 02 — data-layer-migration
+**Current focus:** Phase 03 — category-work-experience
 
 ## Current Position
 
-Phase: 02 (data-layer-migration) — EXECUTING
+Phase: 03 (category-work-experience) — EXECUTING
 Plan: 3 of 3
-Status: Phase complete — ready for verification
-Last activity: 2026-04-14
+Status: Ready to execute
+Last activity: 2026-04-15
 
-Progress: [██░░░░░░░░] 20%
+Progress: [█████░░░░░] 53%
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 3
-- Average duration: 12.7 min
-- Total execution time: 0.6 hours
+- Total plans completed: 8
+- Average duration: 11.0 min
+- Total execution time: 1.5 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01. Sanity Foundation | 3 | 0.6h | 12.7m |
+| 02. Data Layer Migration | 3 | 0.8h | 15.0m |
+| 03. Category Work Experience | 2 | 0.1h | 2.5m |
 
 **Recent Trend:**
 
-- Last 5 plans: 01-01, 01-02, 01-03
-- Trend: Stable
+- Last 5 plans: 02-01, 02-02, 02-03, 03-01, 03-02
+- Trend: Faster after Phase 2 foundation work
 
 *Updated after each plan completion*
 | Phase 02 P01 | 9min | 2 tasks | 7 files |
 | Phase 02 P02 | 28min | 2 tasks | 4 files |
 | Phase 02 P03 | 8min | 2 tasks | 5 files |
+| Phase 03 P01 | 3min | 2 tasks | 6 files |
+| Phase 03 P02 | 2min | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -75,6 +79,10 @@ Recent decisions affecting current work:
 - [Phase 02]: The receipt flow records the live dataset state even when category slots have not yet been seeded, while strict mode still enforces zero gallery items and rejects legacy import flags.
 - [Phase 02]: The fresh-start audit treats 0 gallery items and 0 seeded category documents as the approved Phase 2 live state instead of a migration failure.
 - [Phase 02]: The audit executes the real server-only Work helper module in a react-server child process so CLI verification still exercises the app-facing helper layer.
+- [Phase 03]: The /work landing route now consumes typed category records with resolved cover image URLs instead of constructing Sanity image URLs in the UI.
+- [Phase 03]: Phase 03 enables cdn.sanity.io in next.config.ts as the minimal image change needed for category cover media, leaving broader image cleanup for later.
+- [Phase 03]: The public meaning of /work/[slug] is now a Sanity category gallery, so unknown slugs fail closed against published category records instead of legacy project lookups.
+- [Phase 03]: Gallery items expose resolved image URLs from the helper layer so the category page and grid stay image-led without depending on legacy bridge fields.
 
 ### Pending Todos
 
@@ -87,6 +95,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-14T23:32:05.637Z
-Stopped at: Completed 02-03-PLAN.md
+Last session: 2026-04-15T03:03:07.637Z
+Stopped at: Completed 03-02-PLAN.md
 Resume file: None

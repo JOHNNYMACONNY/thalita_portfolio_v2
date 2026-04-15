@@ -13,13 +13,13 @@
 
 ### Work Landing
 
-- [ ] **WORK-01**: Visitor can open `/work` and see three category cards with cover images and links to category pages
+- [x] **WORK-01**: Visitor can open `/work` and see three category cards with cover images and links to category pages
 - [ ] **WORK-02**: Work navigation from header, overlay, and hero CTA routes to `/work` instead of `/#portfolio`
 
 ### Category Galleries
 
-- [ ] **CAT-01**: Visitor can open a category page and view all visible gallery images assigned to that category
-- [ ] **CAT-02**: Category page shows category identity clearly enough that visitors know which body of work they are browsing
+- [x] **CAT-01**: Visitor can open a category page and view all visible gallery images assigned to that category
+- [x] **CAT-02**: Category page shows category identity clearly enough that visitors know which body of work they are browsing
 - [ ] **CAT-03**: Category gallery pages render using the existing editorial visual language on desktop and mobile
 
 ### Home Curation
@@ -61,10 +61,10 @@
 | SAN-01 | Phase 1 | Complete |
 | SAN-02 | Phase 1 | Complete |
 | SAN-03 | Phase 2 | Complete |
-| WORK-01 | Phase 3 | Pending |
+| WORK-01 | Phase 3 | Complete |
 | WORK-02 | Phase 4 | Pending |
-| CAT-01 | Phase 3 | Pending |
-| CAT-02 | Phase 3 | Pending |
+| CAT-01 | Phase 3 | Complete |
+| CAT-02 | Phase 3 | Complete |
 | CAT-03 | Phase 3 | Pending |
 | HOME-01 | Phase 4 | Pending |
 | HOME-02 | Phase 4 | Pending |

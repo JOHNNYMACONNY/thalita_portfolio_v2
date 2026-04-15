@@ -13,7 +13,7 @@ This roadmap moves the existing portfolio from markdown-backed project pages to 
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Sanity Foundation** - Add Sanity Studio, schema, and client configuration for category and gallery item content
-- [ ] **Phase 2: Data Layer Migration** - Replace markdown portfolio reads with Sanity queries and establish a fresh-start Work dataset workflow
+- [x] **Phase 2: Data Layer Migration** - Replace markdown portfolio reads with Sanity queries and establish a fresh-start Work dataset workflow
 - [ ] **Phase 3: Category Work Experience** - Build the new Work landing page and category gallery routes
 - [ ] **Phase 4: Home Curation And Navigation** - Shift homepage Work content to curated gallery items and repoint navigation
 - [ ] **Phase 5: Legacy CMS Removal** - Remove old project routes, Decap CMS, and leftover Work-specific legacy dependencies
@@ -103,7 +103,7 @@ Phases execute in numeric order: 2 → 2.1 → 2.2 → 3 → 3.1 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Sanity Foundation | 3/3 | Complete | 2026-04-14 |
-| 2. Data Layer Migration | 0/3 | Not started | - |
-| 3. Category Work Experience | 0/3 | Not started | - |
+| 2. Data Layer Migration | 3/3 | Complete | 2026-04-14 |
+| 3. Category Work Experience | 2/3 | In progress | - |
 | 4. Home Curation And Navigation | 0/3 | Not started | - |
 | 5. Legacy CMS Removal | 0/3 | Not started | - |
