@@ -81,6 +81,7 @@ export interface WorkGalleryItem {
     id: string;
     title?: string;
     alt: string;
+    imageUrl: string;
     isVisible: boolean;
     showOnHomePage: boolean;
     homePageOrder?: number;

@@ -60,7 +60,8 @@ function toImageUrl(image?: SanityImageValue) {
 }
 
 function toWorkGalleryItem(record: WorkGalleryItemRecord): WorkGalleryItem | null {
-  if (!record.category || !isNonEmptyString(record.alt) || !record.image?.asset?._ref) {
+  const imageUrl = toImageUrl(record.image);
+  if (!record.category || !isNonEmptyString(record.alt) || !imageUrl) {
     return null;
   }
 
@@ -68,6 +69,7 @@ function toWorkGalleryItem(record: WorkGalleryItemRecord): WorkGalleryItem | nul
     id: record._id,
     title: record.title,
     alt: record.alt,
+    imageUrl,
     image: record.image,
     isVisible: record.isVisible,
     showOnHomePage: record.showOnHomePage,
