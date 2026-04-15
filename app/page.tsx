@@ -3,10 +3,11 @@ import Hero from "@/components/Hero";
 import PortfolioGrid from "@/components/PortfolioGrid";
 import Footer from "@/components/Footer";
 
-import { getProjects, getSiteSettings } from "@/lib/api";
+import { getSiteSettings } from "@/lib/api";
+import { getLegacyProjectsFromSanity } from "@/sanity/lib/work";
 
-export default function Home() {
-  const projects = getProjects();
+export default async function Home() {
+  const projects = await getLegacyProjectsFromSanity();
   const siteSettings = getSiteSettings();
 
   return (
