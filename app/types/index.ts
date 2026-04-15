@@ -65,6 +65,7 @@ export interface WorkCategory {
     description: string;
     displayOrder: number;
     coverImage: SanityImageValue;
+    coverImageUrl: string;
     coverAlt: string;
 }
 
