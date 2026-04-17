@@ -14,7 +14,7 @@
 ### Work Landing
 
 - [x] **WORK-01**: Visitor can open `/work` and see three category cards with cover images and links to category pages
-- [ ] **WORK-02**: Work navigation from header, overlay, and hero CTA routes to `/work` instead of `/#portfolio`
+- [x] **WORK-02**: Work navigation from header, overlay, and hero CTA routes to `/work` instead of `/#portfolio`
 
 ### Category Galleries
 
@@ -24,8 +24,8 @@
 
 ### Home Curation
 
-- [ ] **HOME-01**: Home page renders only gallery items flagged for home page display instead of all portfolio entries
-- [ ] **HOME-02**: Editor can control the order of curated home page gallery items through Sanity
+- [x] **HOME-01**: Home page renders only gallery items flagged for home page display instead of all portfolio entries
+- [x] **HOME-02**: Editor can control the order of curated home page gallery items through Sanity
 
 ### Migration and Cleanup
 
@@ -62,12 +62,12 @@
 | SAN-02 | Phase 1 | Complete |
 | SAN-03 | Phase 2 | Complete |
 | WORK-01 | Phase 3 | Complete |
-| WORK-02 | Phase 4 | Pending |
+| WORK-02 | Phase 4 | Complete |
 | CAT-01 | Phase 3 | Complete |
 | CAT-02 | Phase 3 | Complete |
 | CAT-03 | Phase 3 | Complete |
-| HOME-01 | Phase 4 | Pending |
-| HOME-02 | Phase 4 | Pending |
+| HOME-01 | Phase 4 | Complete |
+| HOME-02 | Phase 4 | Complete |
 | MIG-01 | Phase 2 | Complete |
 | MIG-02 | Phase 5 | Pending |
 | MIG-03 | Phase 5 | Pending |
@@ -79,4 +79,4 @@
 
 ---
 *Requirements defined: 2026-04-13*
-*Last updated: 2026-04-13 after initial definition*
+*Last updated: 2026-04-16 after Phase 04 completion*

@@ -76,9 +76,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 04-01: Replace the home Work grid data source with curated Sanity gallery items
-- [ ] 04-02: Update navigation and CTA links away from `/#portfolio`
-- [ ] 04-03: Verify homepage curation behavior across desktop and mobile layouts
+- [x] 04-01: Replace the home Work grid data source with curated Sanity gallery items
+- [x] 04-02: Update navigation and CTA links away from `/#portfolio`
+- [x] 04-03: Verify homepage curation behavior across desktop and mobile layouts
 
 ### Phase 5: Legacy CMS Removal
 **Goal**: The repo is cleaned of obsolete Work routes and Decap CMS infrastructure after the Sanity-backed flow is verified.
@@ -105,5 +105,5 @@ Phases execute in numeric order: 2 → 2.1 → 2.2 → 3 → 3.1 → 4
 | 1. Sanity Foundation | 3/3 | Complete | 2026-04-14 |
 | 2. Data Layer Migration | 3/3 | Complete | 2026-04-14 |
 | 3. Category Work Experience | 3/3 | Complete | 2026-04-16 |
-| 4. Home Curation And Navigation | 0/3 | Not started | - |
+| 4. Home Curation And Navigation | 3/3 | Complete | 2026-04-16 |
 | 5. Legacy CMS Removal | 0/3 | Not started | - |
