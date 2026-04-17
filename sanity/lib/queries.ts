@@ -29,7 +29,7 @@ export const visibleWorkCategoriesQuery = defineQuery(`
 `);
 
 export const homeWorkGalleryItemsQuery = defineQuery(`
-  *[_type == "galleryItem" && isVisible == true && showOnHomePage == true]
+  *[_type == "galleryItem" && isVisible == true && showOnHomePage == true && defined(category)]
     | order(homePageOrder asc, _createdAt asc) {
       ${galleryItemProjection}
     }

@@ -1,4 +1,5 @@
 import type { StructureResolver } from "sanity/structure";
+import { DocumentsIcon, ImagesIcon } from "@sanity/icons";
 
 const categorySlots = [
   {
@@ -23,10 +24,11 @@ export const structure: StructureResolver = (S) =>
     .title("Content")
     .items([
       S.listItem()
-        .title("Work Categories")
+        .title("Category Slots")
+        .icon(DocumentsIcon)
         .child(
           S.list()
-            .title("Work Categories")
+            .title("Category Slots")
             .items(
               categorySlots.map((slot) =>
                 S.listItem()
@@ -41,10 +43,23 @@ export const structure: StructureResolver = (S) =>
             )
         ),
       S.listItem()
-        .title("Gallery Items")
+        .title("Unassigned Photos")
+        .icon(ImagesIcon)
+        .child(
+          S.documentList()
+            .title("Unassigned Photos")
+            .schemaType("galleryItem")
+            .filter('_type == "galleryItem" && !defined(category)')
+            .defaultOrdering([{ field: "_updatedAt", direction: "desc" }])
+            .initialValueTemplates([])
+        ),
+      S.listItem()
+        .title("All Photos")
+        .icon(ImagesIcon)
         .child(
           S.documentTypeList("galleryItem")
-            .title("Gallery Items")
+            .title("All Photos")
+            .defaultOrdering([{ field: "_updatedAt", direction: "desc" }])
             .initialValueTemplates([])
         ),
     ]);

@@ -14,16 +14,16 @@ export const galleryItem = defineType({
       return {
         title: selection.title || "Untitled gallery item",
         media: selection.media,
-        subtitle: selection.subtitle,
+        subtitle: selection.subtitle || "Unassigned photo",
       };
     },
   },
   fields: [
     defineField({
       name: "title",
-      title: "Title",
+      title: "Photo Label",
       type: "string",
-      description: "Optional internal label for editors.",
+      description: "Optional internal name to help you recognize this photo later.",
     }),
     defineField({
       name: "image",
@@ -38,6 +38,7 @@ export const galleryItem = defineType({
       name: "alt",
       title: "Alt Text",
       type: "string",
+      description: "Describe the image for accessibility. The upload tool can prefill this so you can refine it later.",
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -48,13 +49,14 @@ export const galleryItem = defineType({
       options: {
         disableNew: true,
       },
-      validation: (rule) => rule.required(),
+      description: "Leave this blank to keep the photo in Unassigned until you're ready to sort it.",
     }),
     defineField({
       name: "isVisible",
-      title: "Visible",
+      title: "Visible On Site",
       type: "boolean",
       initialValue: true,
+      description: "Only assigned photos can appear on the public site.",
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -62,13 +64,22 @@ export const galleryItem = defineType({
       title: "Show On Home Page",
       type: "boolean",
       initialValue: false,
-      validation: (rule) => rule.required(),
+      hidden: ({ document }) => !document?.category,
+      description: "Turn this on after the photo has been assigned to a category.",
+      validation: (rule) =>
+        rule.required().custom((value, context) => {
+          if (value && !context.document?.category) {
+            return "Assign a category before showing this photo on the home page.";
+          }
+
+          return true;
+        }),
     }),
     defineField({
       name: "homePageOrder",
       title: "Home Page Order",
       type: "number",
-      hidden: ({ document }) => !document?.showOnHomePage,
+      hidden: ({ document }) => !document?.category || !document?.showOnHomePage,
       validation: (rule) =>
         rule.integer().custom((value, context) => {
           if (!context.document?.showOnHomePage) {
