@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "dev": "find . -name '._*' -delete && next dev",
-    "dev:admin": "npx decap-server",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",

@@ -1,6 +1,6 @@
 # Thalita's Portfolio
 
-A clean, minimalist portfolio website for Thalita Bueno, built with Next.js, Tailwind CSS (v4), and Framer Motion.
+A content-driven editorial portfolio for Thalita Bueno, built with Next.js, Tailwind CSS (v4), Framer Motion, and Sanity Studio.
 
 ## 🚀 Getting Started
 
@@ -93,11 +93,10 @@ Phase 2 intentionally starts the Work dataset from zero imported photos. The app
 
 ## 📁 Project Structure
 
-## 📁 Project Structure
-- \`app/\`: Application routes (Home, Work, About, Services).
-- \`components/\`: Reusable UI components.
-- \`content/\`: CMS-managed data (JSON/Markdown).
-- \`public/admin/\`: Decap CMS configuration.
+- `app/`: Application routes, including the embedded `/studio` workspace.
+- `components/`: Reusable UI components.
+- `content/`: Remaining file-based site content for non-Work sections.
+- `sanity/`: Shared Studio config, schemas, and migration/audit scripts.
 
 ## 📝 Roadmap & Status
 
@@ -109,9 +108,9 @@ See [.planning/ROADMAP.md](.planning/ROADMAP.md) for detailed granular progress.
     - "Spread" layout for Projects.
     - Minimalist Typography (Caooli / Orlient).
 - [x] **CMS Integration**
-    - Services Page (JSON managed).
-    - Project Content (Markdown managed).
+  - Services Page (JSON managed).
+  - Sanity-backed Work categories and gallery items.
 - [x] **Mobile & Performance**
-    - Responsive Hardening (iPhone X verified).
-    - LCP Optimization.
-    - Custom 404 Page.
+  - Responsive Hardening (iPhone X verified).
+  - LCP Optimization.
+  - Custom 404 Page.

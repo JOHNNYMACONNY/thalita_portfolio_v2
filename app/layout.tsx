@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -42,7 +41,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${caooli.variable} ${orlientPro.variable} antialiased`}
       >
         {children}
-        <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" strategy="lazyOnload" />
       </body>
     </html >
   );
