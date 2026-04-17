@@ -34,9 +34,6 @@ type AuditSnapshot = {
   helperCategories: HelperCategoryRecord[];
   homeGalleryItems: HelperGalleryItemRecord[];
   galleryItemsByKnownCategory: HelperGalleryItemRecord[];
-  legacyProjects: HelperLegacyProjectRecord[];
-  legacyProjectSlugs: string[];
-  legacyProjectLookup: HelperLegacyProjectRecord | null;
 };
 
 const repoRoot = path.resolve(__dirname, "../..");
@@ -68,17 +65,10 @@ type HelperGalleryItemRecord = {
   id: string;
 };
 
-type HelperLegacyProjectRecord = {
-  slug: string;
-};
-
 type HelperSnapshot = {
   categories: HelperCategoryRecord[];
   homeGalleryItems: HelperGalleryItemRecord[];
   galleryItemsByKnownCategory: HelperGalleryItemRecord[];
-  legacyProjects: HelperLegacyProjectRecord[];
-  legacyProjectSlugs: string[];
-  legacyProjectLookup: HelperLegacyProjectRecord | null;
 };
 
 function parseCliArgs(argv: string[]): CliOptions {
@@ -202,22 +192,16 @@ function runHelperSnapshot(categorySlug: string): HelperSnapshot {
   const script = `
     const imported = await import(${JSON.stringify(path.join(repoRoot, "sanity/lib/work.ts"))});
     const work = imported.default ?? imported;
-    const { getWorkCategories, getHomeGalleryItems, getGalleryItemsByCategorySlug, getLegacyProjectsFromSanity, getLegacyProjectSlugsFromSanity, getLegacyProjectBySlugFromSanity } = work;
-    const [categories, homeGalleryItems, galleryItemsByKnownCategory, legacyProjects, legacyProjectSlugs, legacyProjectLookup] = await Promise.all([
+    const { getWorkCategories, getHomeGalleryItems, getGalleryItemsByCategorySlug } = work;
+    const [categories, homeGalleryItems, galleryItemsByKnownCategory] = await Promise.all([
       getWorkCategories(),
       getHomeGalleryItems(),
-      getGalleryItemsByCategorySlug(${JSON.stringify(categorySlug)}),
-      getLegacyProjectsFromSanity(),
-      getLegacyProjectSlugsFromSanity(),
-      getLegacyProjectBySlugFromSanity("non-existent-legacy-project")
+      getGalleryItemsByCategorySlug(${JSON.stringify(categorySlug)})
     ]);
     process.stdout.write(JSON.stringify({
       categories,
       homeGalleryItems,
-      galleryItemsByKnownCategory,
-      legacyProjects,
-      legacyProjectSlugs,
-      legacyProjectLookup
+      galleryItemsByKnownCategory
     }));
   `;
 
@@ -292,14 +276,13 @@ function renderAuditReport(snapshot: AuditSnapshot, options: CliOptions) {
     `- Direct categories: ${snapshot.directCategories.length}`,
     `- Helper categories: ${snapshot.helperCategories.length}`,
     `- Helper home gallery items: ${snapshot.homeGalleryItems.length}`,
-    `- Helper legacy projects: ${snapshot.legacyProjects.length}`,
     "",
     "## Findings",
     "",
     "- The checked-in receipt matches the live dataset count for gallery items.",
     "- Empty-state-safe helper reads return arrays or `null` instead of throwing when Work has no photos.",
-    "- Legacy-project bridge helpers do not require imported markdown-derived Sanity records to remain stable.",
     `- ${categoryAssessment}`,
+    "- Legacy project bridge helpers have been removed, so this audit now verifies only the live category and gallery APIs.",
     "",
     "## Category Snapshot",
     "",
@@ -318,9 +301,6 @@ function renderAuditReport(snapshot: AuditSnapshot, options: CliOptions) {
     "## Empty-State Helper Checks",
     "",
     `- \`getHomeGalleryItems()\` returned ${snapshot.homeGalleryItems.length} items.`,
-    `- \`getLegacyProjectsFromSanity()\` returned ${snapshot.legacyProjects.length} projects.`,
-    `- \`getLegacyProjectSlugsFromSanity()\` returned ${snapshot.legacyProjectSlugs.length} slugs.`,
-    `- \`getLegacyProjectBySlugFromSanity(\"non-existent-legacy-project\")\` returned ${snapshot.legacyProjectLookup === null ? "`null`" : "`data`"}.`,
     `- \`getGalleryItemsByCategorySlug(\"editorial\")\` returned ${snapshot.galleryItemsByKnownCategory.length} items.`,
     "",
     "## Manual Editorial Workflow",
@@ -376,27 +356,11 @@ export function validateAuditSnapshot(snapshot: AuditSnapshot, options: CliOptio
     throw new Error("getGalleryItemsByCategorySlug() did not return an array.");
   }
 
-  if (!Array.isArray(snapshot.legacyProjects)) {
-    throw new Error("getLegacyProjectsFromSanity() did not return an array.");
-  }
-
-  if (!Array.isArray(snapshot.legacyProjectSlugs)) {
-    throw new Error("getLegacyProjectSlugsFromSanity() did not return an array.");
-  }
-
-  if (snapshot.legacyProjectLookup !== null) {
-    throw new Error("getLegacyProjectBySlugFromSanity() should return null for a missing legacy slug.");
-  }
-
   if (options.strict) {
     if (snapshot.directGalleryItemCount !== 0) {
       throw new Error(
         `Strict fresh-start audit requires zero gallery items, found ${snapshot.directGalleryItemCount}.`,
       );
-    }
-
-    if (snapshot.legacyProjects.length !== 0 || snapshot.legacyProjectSlugs.length !== 0) {
-      throw new Error("Strict fresh-start audit found legacy-project bridge data in a fresh-start dataset.");
     }
   }
 }
@@ -435,9 +399,6 @@ async function buildAuditSnapshot(): Promise<AuditSnapshot> {
     helperCategories: helperSnapshot.categories,
     homeGalleryItems: helperSnapshot.homeGalleryItems,
     galleryItemsByKnownCategory: helperSnapshot.galleryItemsByKnownCategory,
-    legacyProjects: helperSnapshot.legacyProjects,
-    legacyProjectSlugs: helperSnapshot.legacyProjectSlugs,
-    legacyProjectLookup: helperSnapshot.legacyProjectLookup,
   };
 }
 
@@ -466,9 +427,6 @@ async function runSelfTest() {
       helperCategories: [],
       homeGalleryItems: [],
       galleryItemsByKnownCategory: [],
-      legacyProjects: [],
-      legacyProjectSlugs: [],
-      legacyProjectLookup: null,
     },
     options,
   );
@@ -492,9 +450,6 @@ async function runSelfTest() {
         helperCategories: [],
         homeGalleryItems: [],
         galleryItemsByKnownCategory: [],
-        legacyProjects: [],
-        legacyProjectSlugs: [],
-        legacyProjectLookup: null,
       },
       options,
     ),
