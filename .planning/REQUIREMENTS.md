@@ -20,7 +20,7 @@
 
 - [x] **CAT-01**: Visitor can open a category page and view all visible gallery images assigned to that category
 - [x] **CAT-02**: Category page shows category identity clearly enough that visitors know which body of work they are browsing
-- [ ] **CAT-03**: Category gallery pages render using the existing editorial visual language on desktop and mobile
+- [x] **CAT-03**: Category gallery pages render using the existing editorial visual language on desktop and mobile
 
 ### Home Curation
 
@@ -65,7 +65,7 @@
 | WORK-02 | Phase 4 | Pending |
 | CAT-01 | Phase 3 | Complete |
 | CAT-02 | Phase 3 | Complete |
-| CAT-03 | Phase 3 | Pending |
+| CAT-03 | Phase 3 | Complete |
 | HOME-01 | Phase 4 | Pending |
 | HOME-02 | Phase 4 | Pending |
 | MIG-01 | Phase 2 | Complete |

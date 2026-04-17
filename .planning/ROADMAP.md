@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Sanity Foundation** - Add Sanity Studio, schema, and client configuration for category and gallery item content
 - [x] **Phase 2: Data Layer Migration** - Replace markdown portfolio reads with Sanity queries and establish a fresh-start Work dataset workflow
-- [ ] **Phase 3: Category Work Experience** - Build the new Work landing page and category gallery routes
+- [x] **Phase 3: Category Work Experience** - Build the new Work landing page and category gallery routes
 - [ ] **Phase 4: Home Curation And Navigation** - Shift homepage Work content to curated gallery items and repoint navigation
 - [ ] **Phase 5: Legacy CMS Removal** - Remove old project routes, Decap CMS, and leftover Work-specific legacy dependencies
 
@@ -46,9 +46,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — Move active Work reads to Sanity helpers while preserving the overlap routes
-- [ ] 02-02-PLAN.md — Replace legacy import assumptions with a fresh-start dataset bootstrap and approval flow
-- [ ] 02-03-PLAN.md — Audit fresh-start data behavior and document the manual editorial workflow
+- [x] 02-01-PLAN.md — Move active Work reads to Sanity helpers while preserving the overlap routes
+- [x] 02-02-PLAN.md — Replace legacy import assumptions with a fresh-start dataset bootstrap and approval flow
+- [x] 02-03-PLAN.md — Audit fresh-start data behavior and document the manual editorial workflow
 
 ### Phase 3: Category Work Experience
 **Goal**: Visitors can browse Work through a landing page of category cards and category-specific image galleries.
@@ -61,9 +61,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 03-01: Add `/work` landing route and category card presentation
-- [ ] 03-02: Add category gallery route and gallery rendering components
-- [ ] 03-03: Tune responsive behavior, empty states, and loading/error handling for new Work routes
+- [x] 03-01: Add `/work` landing route and category card presentation
+- [x] 03-02: Add category gallery route and gallery rendering components
+- [x] 03-03: Tune responsive behavior, empty states, and loading/error handling for new Work routes
 
 ### Phase 4: Home Curation And Navigation
 **Goal**: The homepage and site navigation reflect the new Work structure without changing the site's overall aesthetic.
@@ -104,6 +104,6 @@ Phases execute in numeric order: 2 → 2.1 → 2.2 → 3 → 3.1 → 4
 |-------|----------------|--------|-----------|
 | 1. Sanity Foundation | 3/3 | Complete | 2026-04-14 |
 | 2. Data Layer Migration | 3/3 | Complete | 2026-04-14 |
-| 3. Category Work Experience | 2/3 | In progress | - |
+| 3. Category Work Experience | 3/3 | Complete | 2026-04-16 |
 | 4. Home Curation And Navigation | 0/3 | Not started | - |
 | 5. Legacy CMS Removal | 0/3 | Not started | - |
