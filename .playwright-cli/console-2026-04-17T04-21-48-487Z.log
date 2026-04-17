@@ -1,2 +1,86 @@
 [ 5558333ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
 [ 5558378ms] [LOG] [HMR] connected @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 6621142ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 6621317ms] [LOG] [Fast Refresh] done in 179ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 6621424ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 6622061ms] [LOG] [Fast Refresh] done in 738ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 6630689ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 6630781ms] [ERROR] ./sanity/lib/work.ts:7:1
+Export legacyWorkGalleryItemsByProjectSlugQuery doesn't exist in target module
+   5 | import { client } from "./client";
+   6 | import { urlFor } from "./image";
+>  7 | import {
+     | ^^^^^^^^
+>  8 |   galleryItemsByCategorySlugQuery,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   homeWorkGalleryItemsQuery,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   legacyWorkGalleryItemsByProjectSlugQuery,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 |   legacyWorkGalleryItemsQuery,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   visibleWorkCategoriesQuery,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 13 | } from "./queries";
+     | ^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | type WorkCategoryRecord = {
+  16 |   _id: string;
+
+The export legacyWorkGalleryItemsByProjectSlugQuery was not found in module [project]/sanity/lib/queries.ts [app-rsc] (ecmascript).
+Did you mean to import galleryItemsByCategorySlugQuery?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./sanity/lib/work.ts
+    ./app/page.tsx @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 6630781ms] [ERROR] ./sanity/lib/work.ts:7:1
+Export legacyWorkGalleryItemsQuery doesn't exist in target module
+   5 | import { client } from "./client";
+   6 | import { urlFor } from "./image";
+>  7 | import {
+     | ^^^^^^^^
+>  8 |   galleryItemsByCategorySlugQuery,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   homeWorkGalleryItemsQuery,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   legacyWorkGalleryItemsByProjectSlugQuery,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 |   legacyWorkGalleryItemsQuery,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   visibleWorkCategoriesQuery,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 13 | } from "./queries";
+     | ^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | type WorkCategoryRecord = {
+  16 |   _id: string;
+
+The export legacyWorkGalleryItemsQuery was not found in module [project]/sanity/lib/queries.ts [app-rsc] (ecmascript).
+Did you mean to import homeWorkGalleryItemsQuery?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./sanity/lib/work.ts
+    ./app/page.tsx @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 6654719ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 6654756ms] [LOG] [Fast Refresh] done in 136ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 6654859ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 6654862ms] [LOG] [Fast Refresh] done in 103ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 6663861ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 6664197ms] [LOG] [Fast Refresh] done in 439ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 6771970ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 6772997ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=uCuHuOZLC_prFkcB2ZhB-' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[ 6774002ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=uCuHuOZLC_prFkcB2ZhB-' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[ 6775004ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=uCuHuOZLC_prFkcB2ZhB-' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[ 6776007ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=uCuHuOZLC_prFkcB2ZhB-' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[ 6777011ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=uCuHuOZLC_prFkcB2ZhB-' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[ 6782018ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=uCuHuOZLC_prFkcB2ZhB-' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[ 6787033ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=uCuHuOZLC_prFkcB2ZhB-' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[ 6792057ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=uCuHuOZLC_prFkcB2ZhB-' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[ 6797098ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=uCuHuOZLC_prFkcB2ZhB-' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[ 6802146ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=uCuHuOZLC_prFkcB2ZhB-' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[ 6807265ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=uCuHuOZLC_prFkcB2ZhB-' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[ 6812357ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=uCuHuOZLC_prFkcB2ZhB-' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
