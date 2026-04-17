@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: executing
-stopped_at: Completed 04-03-PLAN.md
-last_updated: "2026-04-17T06:09:06.131Z"
-last_activity: 2026-04-17 -- Phase 05 execution started
+status: completed
+stopped_at: Completed 05-03-PLAN.md
+last_updated: "2026-04-17T07:22:00.000Z"
+last_activity: 2026-04-17 -- Phase 05 completed and v1 roadmap closed
 progress:
   total_phases: 5
-  completed_phases: 4
-  total_plans: 18
-  completed_plans: 12
-  percent: 67
+  completed_phases: 5
+  total_plans: 15
+  completed_plans: 15
+  percent: 100
 ---
 
 # Project State
@@ -21,22 +21,22 @@ progress:
 See: .planning/PROJECT.md (updated 2026-04-13)
 
 **Core value:** Editors can manage a polished portfolio gallery through Sanity while visitors browse a cleaner, category-driven Work experience without losing the site's existing aesthetic quality.
-**Current focus:** Phase 05 — legacy-cms-removal
+**Current focus:** Milestone complete
 
 ## Current Position
 
-Phase: 05 (legacy-cms-removal) — EXECUTING
-Plan: 1 of 3
-Status: Executing Phase 05
-Last activity: 2026-04-17 -- Phase 05 execution started
+Phase: 05 (legacy-cms-removal) — COMPLETE
+Plan: 3 of 3
+Status: Milestone complete
+Last activity: 2026-04-17 -- Phase 05 completed and v1 roadmap closed
 
-Progress: [████████░░] 80%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 12
+- Total plans completed: 15
 - Average duration: 11.1 min
 - Total execution time: 1.7 hours
 
@@ -48,11 +48,12 @@ Progress: [████████░░] 80%
 | 02. Data Layer Migration | 3 | 0.8h | 15.0m |
 | 03. Category Work Experience | 3 | 0.5h | 10.0m |
 | 04. Home Curation And Navigation | 3 | 0.8h | 15.7m |
+| 05. Legacy CMS Removal | 3 | 1.0h | 20.0m |
 
 **Recent Trend:**
 
-- Last 5 plans: 03-02, 03-03, 04-01, 04-02, 04-03
-- Trend: Stable
+- Last 5 plans: 04-02, 04-03, 05-01, 05-02, 05-03
+- Trend: Completed
 
 *Updated after each plan completion*
 | Phase 02 P01 | 9min | 2 tasks | 7 files |
@@ -64,6 +65,9 @@ Progress: [████████░░] 80%
 | Phase 04 P01 | 14min | 2 tasks | 2 files |
 | Phase 04 P02 | 8min | 2 tasks | 5 files |
 | Phase 04 P03 | 25min | 2 tasks | 7 files |
+| Phase 05 P01 | 20min | 2 tasks | 9 files |
+| Phase 05 P02 | 18min | 2 tasks | 9 files |
+| Phase 05 P03 | 35min | 2 tasks | 10 files |
 
 ## Accumulated Context
 
@@ -92,6 +96,9 @@ Recent decisions affecting current work:
 - [Phase 04]: The homepage now reads `getHomeGalleryItems()` through a dedicated `HomeGalleryGrid` instead of the legacy project bridge and `PortfolioGrid`.
 - [Phase 04]: Shared Work discovery now routes to `/work` across the header, hero CTA, mobile overlay, fallback menu, and hardcoded nav config.
 - [Phase 04]: Phase 04 closes on a checked-in UAT artifact plus user-approved Studio verification, with any missing reorder-item specifics called out explicitly instead of guessed.
+- [Phase 05]: The temporary legacy project bridge, `/portfolio` route, and old project-card components are fully removed from the live app.
+- [Phase 05]: `/studio` is now the only CMS entry point; `/admin`, Decap assets, and Netlify Identity glue tied to Decap were removed.
+- [Phase 05]: Active image config is now Sanity-only for Work content, and legacy markdown Work source files were deleted after runtime verification.
 
 ### Pending Todos
 
@@ -103,6 +110,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-17T05:49:24Z
-Stopped at: Completed 04-03-PLAN.md
+Last session: 2026-04-17T07:22:00Z
+Stopped at: Completed 05-03-PLAN.md
 Resume file: None

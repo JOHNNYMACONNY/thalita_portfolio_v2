@@ -1,7 +1,7 @@
 # Phase 05 UAT
 
 **Date:** 2026-04-16
-**Status:** Pending Approval
+**Status:** Approved
 **Phase:** 05-legacy-cms-removal
 
 ## Scope
@@ -36,7 +36,8 @@ Verify that:
 - Confirm the page loads normally and the Work entry points still feel intact
 
 Result:
-- [ ] Pending
+- [x] Passed
+- Notes: User approved the manual homepage verification after confirming the local dev server output.
 
 ### 2. Confirm the Work landing page still loads
 
@@ -44,7 +45,8 @@ Result:
 - Confirm the three category cards render and navigation works as expected
 
 Result:
-- [ ] Pending
+- [x] Passed
+- Notes: User approved the `/work` landing page check.
 
 ### 3. Confirm a category gallery still loads
 
@@ -52,7 +54,8 @@ Result:
 - Confirm the gallery renders without the old project-detail experience reappearing
 
 Result:
-- [ ] Pending
+- [x] Passed
+- Notes: User approved the category-gallery route check using the live Phase 5 dev server.
 
 ### 4. Confirm Studio remains the active CMS
 
@@ -60,7 +63,8 @@ Result:
 - Confirm Studio loads and remains usable for Work categories and gallery items
 
 Result:
-- [ ] Pending
+- [x] Passed
+- Notes: User approved the `/studio` verification and did not report any regression in Studio access.
 
 ### 5. Confirm the old admin path is gone
 
@@ -68,8 +72,9 @@ Result:
 - Confirm the old Decap admin interface does not load
 
 Result:
-- [ ] Pending
+- [x] Passed
+- Notes: User approved the legacy `/admin` removal check.
 
 ## Completion Gate
 
-Phase 05 cannot be marked complete until the user approves the manual checks above.
+Phase 05 manual verification was approved by the user on 2026-04-16 after checking the local dev server routes.

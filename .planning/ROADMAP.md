@@ -15,8 +15,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Sanity Foundation** - Add Sanity Studio, schema, and client configuration for category and gallery item content
 - [x] **Phase 2: Data Layer Migration** - Replace markdown portfolio reads with Sanity queries and establish a fresh-start Work dataset workflow
 - [x] **Phase 3: Category Work Experience** - Build the new Work landing page and category gallery routes
-- [ ] **Phase 4: Home Curation And Navigation** - Shift homepage Work content to curated gallery items and repoint navigation
-- [ ] **Phase 5: Legacy CMS Removal** - Remove old project routes, Decap CMS, and leftover Work-specific legacy dependencies
+- [x] **Phase 4: Home Curation And Navigation** - Shift homepage Work content to curated gallery items and repoint navigation
+- [x] **Phase 5: Legacy CMS Removal** - Remove old project routes, Decap CMS, and leftover Work-specific legacy dependencies
 
 ## Phase Details
 
@@ -91,14 +91,14 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 05-01: Remove obsolete Work routes and unused presentation components
-- [ ] 05-02: Remove Decap CMS assets, scripts, rewrites, and identity integration no longer needed
-- [ ] 05-03: Finalize image config, cleanup leftover markdown portfolio content, and run regression verification
+- [x] 05-01: Remove obsolete Work routes and unused presentation components
+- [x] 05-02: Remove Decap CMS assets, scripts, rewrites, and identity integration no longer needed
+- [x] 05-03: Finalize image config, cleanup leftover markdown portfolio content, and run regression verification
 
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 2 → 2.1 → 2.2 → 3 → 3.1 → 4
+Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -106,4 +106,4 @@ Phases execute in numeric order: 2 → 2.1 → 2.2 → 3 → 3.1 → 4
 | 2. Data Layer Migration | 3/3 | Complete | 2026-04-14 |
 | 3. Category Work Experience | 3/3 | Complete | 2026-04-16 |
 | 4. Home Curation And Navigation | 3/3 | Complete | 2026-04-16 |
-| 5. Legacy CMS Removal | 0/3 | Not started | - |
+| 5. Legacy CMS Removal | 3/3 | Complete | 2026-04-16 |
