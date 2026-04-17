@@ -81,7 +81,7 @@ export default function NavigationOverlay({ isOpen, onClose }: NavigationOverlay
                     {/* Navigation Links */}
                     <nav className="flex flex-col items-center gap-6 text-center">
                         <NavLink href="/" label="Home" currentPath={pathname} onClick={onClose} />
-                        <NavLink href="/#portfolio" label="Portfolio" currentPath={pathname} onClick={onClose} />
+                        <NavLink href="/work" label="Work" currentPath={pathname} onClick={onClose} />
                         <NavLink href="/services" label="Services" currentPath={pathname} onClick={onClose} />
                         <NavLink href="/about" label="About" currentPath={pathname} onClick={onClose} />
                         <NavLink href="/contact" label="Contact" currentPath={pathname} onClick={onClose} />
@@ -113,7 +113,7 @@ function NavLink({
     currentPath: string;
     onClick: () => void;
 }) {
-    const isActive = currentPath === href;
+    const isActive = href === "/work" ? currentPath.startsWith("/work") : currentPath === href;
 
     return (
         <motion.div variants={linkVariants} className="overflow-hidden">

@@ -57,7 +57,7 @@ export default function Hero({ title, subtitle }: HeroProps) {
             >
                 {/* Primary CTA: View Work */}
                 <Link
-                    href="#portfolio"
+                    href="/work"
                     // EDITORIAL CHANGE: Removed rounded-full. Sharp corners.
                     className="group relative px-8 py-3 bg-charcoal text-white transition-all duration-300 hover:bg-magenta"
                 >
