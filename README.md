@@ -64,6 +64,24 @@ Phase 1 assumes two Administrator users on Sanity's Free plan for Thalita and he
 8. Turn on `showOnHomePage` and confirm `homePageOrder` appears; turn it off and confirm that field is hidden again.
 9. Confirm the workflow does not expose a multi-category assignment path for gallery items.
 
+## Photo upload workflow
+
+Phase 6 adds a simpler intake path for non-technical editors inside `/studio`.
+
+### Intended editor flow
+
+1. Open `Upload Photos` in Studio.
+2. Choose several image files at once.
+3. Leave the destination on `Unassigned` when you want to upload first and sort later.
+4. Review the upload results and move into `Unassigned Photos` to continue organizing.
+5. Assign categories and publish only after the photos are ready for the live site.
+
+### Important behavior
+
+- Uploads created through the batch upload tool are saved as draft `galleryItem` documents.
+- `Unassigned` photos stay out of `/`, `/work`, and `/work/[slug]` until they are categorized and published.
+- The upload tool pre-fills a starter label and alt text from the filename so editors can refine details after intake.
+
 ## Phase 2 fresh start workflow
 
 Phase 2 intentionally starts the Work dataset from zero imported photos. The approved fresh-start receipt is tracked in `.planning/phases/02-data-layer-migration/02-FRESH-START-RECEIPT.md`, and the corresponding helper audit is tracked in `.planning/phases/02-data-layer-migration/02-FRESH-START-AUDIT.md`.
