@@ -1,34 +1,29 @@
 import Header from "@/components/Header";
+import HomeGalleryGrid from "@/components/HomeGalleryGrid";
 import Hero from "@/components/Hero";
-import PortfolioGrid from "@/components/PortfolioGrid";
 import Footer from "@/components/Footer";
 
 import { getSiteSettings } from "@/lib/api";
-import { getLegacyProjectsFromSanity } from "@/sanity/lib/work";
+import { getHomeGalleryItems } from "@/sanity/lib/work";
 
 export default async function Home() {
-  const projects = await getLegacyProjectsFromSanity();
-  const siteSettings = getSiteSettings();
+  const [homeGalleryItems, siteSettings] = await Promise.all([
+    getHomeGalleryItems(),
+    Promise.resolve(getSiteSettings()),
+  ]);
 
   return (
     <div className="min-h-screen selection:bg-magenta selection:text-white">
       <Header />
 
-      <main className="w-full pt-32 pb-24 px-4 md:px-12 max-w-[1600px] mx-auto">
-
-        {/* Hero Section */}
+      <main className="mx-auto w-full max-w-[1600px] px-4 pb-24 pt-32 md:px-12">
         <Hero title={siteSettings.heroTitle} subtitle={siteSettings.heroSubtitle} />
 
-        {/* Portfolio Grid - Masonry Style */}
-        <section id="portfolio" className="mb-32">
-          <div className="w-full">
-            <PortfolioGrid projects={projects} />
-          </div>
+        <section className="mb-32">
+          <HomeGalleryGrid items={homeGalleryItems} />
         </section>
 
-        {/* Footer Minimal */}
         <Footer email={siteSettings.email} socials={siteSettings.socials} />
-
       </main>
     </div>
   );
