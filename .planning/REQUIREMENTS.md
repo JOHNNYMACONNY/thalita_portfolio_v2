@@ -7,9 +7,9 @@
 
 ### Upload Workflow
 
-- [ ] **UPL-01**: Editor can batch upload multiple images into the Work library in one session
-- [ ] **UPL-02**: Upload flow shows thumbnail previews, progress, and failed-upload feedback clearly enough that the editor knows what happened
-- [ ] **UPL-03**: Newly uploaded images can land in an obvious `Unassigned` state instead of requiring immediate category decisions
+- [x] **UPL-01**: Editor can batch upload multiple images into the Work library in one session
+- [x] **UPL-02**: Upload flow shows thumbnail previews, progress, and failed-upload feedback clearly enough that the editor knows what happened
+- [x] **UPL-03**: Newly uploaded images can land in an obvious `Unassigned` state instead of requiring immediate category decisions
 
 ### Organization
 
@@ -25,7 +25,7 @@
 
 ### Editor Experience
 
-- [ ] **EDT-01**: The image-management workflow uses plain-language labels and guardrails so a non-technical editor does not need to understand Sanity internals
+- [x] **EDT-01**: The image-management workflow uses plain-language labels and guardrails so a non-technical editor does not need to understand Sanity internals
 
 ## v2 Requirements
 
@@ -52,16 +52,16 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| UPL-01 | Phase 6 | Pending |
-| UPL-02 | Phase 6 | Pending |
-| UPL-03 | Phase 6 | Pending |
+| UPL-01 | Phase 6 | Complete |
+| UPL-02 | Phase 6 | Complete |
+| UPL-03 | Phase 6 | Complete |
 | ORG-01 | Phase 7 | Pending |
 | ORG-02 | Phase 7 | Pending |
 | ORG-03 | Phase 7 | Pending |
 | PLC-01 | Phase 8 | Pending |
 | PLC-02 | Phase 8 | Pending |
 | PLC-03 | Phase 8 | Pending |
-| EDT-01 | Phase 6 | Pending |
+| EDT-01 | Phase 6 | Complete |
 
 **Coverage:**
 - v1 requirements: 10 total
@@ -70,4 +70,4 @@
 
 ---
 *Requirements defined: 2026-04-16*
-*Last updated: 2026-04-16 after starting milestone v1.1 Simple Photo Management*
+*Last updated: 2026-04-17 after completing Phase 06 Upload Workflow Foundation*

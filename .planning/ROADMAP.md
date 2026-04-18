@@ -17,7 +17,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 3: Category Work Experience** - Build the new Work landing page and category gallery routes
 - [x] **Phase 4: Home Curation And Navigation** - Shift homepage Work content to curated gallery items and repoint navigation
 - [x] **Phase 5: Legacy CMS Removal** - Remove old project routes, Decap CMS, and leftover Work-specific legacy dependencies
-- [ ] **Phase 6: Upload Workflow Foundation** - Simplify photo intake and establish a friendly image-management surface
+- [x] **Phase 6: Upload Workflow Foundation** - Simplify photo intake and establish a friendly image-management surface
 - [ ] **Phase 7: Category Assignment And Organization** - Make category sorting and bulk photo organization visual and fast
 - [ ] **Phase 8: Placement And Publishing Controls** - Make homepage/category placement and ordering obvious before publishing
 
@@ -110,9 +110,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 06-01: Define the simplified upload model, plain-language labels, and editor-facing image states
-- [ ] 06-02: Build the batch upload surface and unassigned-image intake flow
-- [ ] 06-03: Verify the upload experience for a non-technical editor and clean up rough edges
+- [x] 06-01: Define the simplified upload model, plain-language labels, and editor-facing image states
+- [x] 06-02: Build the batch upload surface and unassigned-image intake flow
+- [x] 06-03: Verify the upload experience for a non-technical editor and clean up rough edges
 
 ### Phase 7: Category Assignment And Organization
 **Goal**: The editor can sort uploaded photos into categories quickly using a visual, bulk-friendly organizer.
@@ -156,6 +156,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 | 3. Category Work Experience | 3/3 | Complete | 2026-04-16 |
 | 4. Home Curation And Navigation | 3/3 | Complete | 2026-04-16 |
 | 5. Legacy CMS Removal | 3/3 | Complete | 2026-04-16 |
-| 6. Upload Workflow Foundation | 0/3 | Planned | - |
+| 6. Upload Workflow Foundation | 3/3 | Complete | 2026-04-17 |
 | 7. Category Assignment And Organization | 0/3 | Planned | - |
 | 8. Placement And Publishing Controls | 0/3 | Planned | - |
