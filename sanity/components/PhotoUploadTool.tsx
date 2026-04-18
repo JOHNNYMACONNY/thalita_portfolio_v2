@@ -443,6 +443,20 @@ export function PhotoUploadTool() {
                 </Stack>
               </Card>
             ) : null}
+
+            {results.some((result) => result.status === "created") ? (
+              <Card padding={3} radius={2} tone="primary">
+                <Stack space={2}>
+                  <Text size={1} weight="semibold">
+                    Next step
+                  </Text>
+                  <Text size={1}>
+                    Open <strong>Organize Photos</strong> to review draft readiness, place the new
+                    photos, and publish the ones that are ready to go live.
+                  </Text>
+                </Stack>
+              </Card>
+            ) : null}
           </Stack>
         </Card>
       </Stack>
