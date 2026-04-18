@@ -77,6 +77,7 @@ export interface WorkGalleryItem {
     isVisible: boolean;
     showOnHomePage: boolean;
     homePageOrder?: number;
+    categoryOrder?: number;
     image: SanityImageValue;
     category: Pick<WorkCategory, "id" | "title" | "slug" | "displayOrder">;
 }

@@ -2,76 +2,55 @@
 gsd_state_version: 1.0
 milestone: v1.1
 milestone_name: simple-photo-management
-status: ready
-stopped_at: Phase 06 complete
-last_updated: "2026-04-17T09:00:00.000Z"
-last_activity: 2026-04-17 -- Phase 06 Upload Workflow Foundation completed and approved
+status: archived
+stopped_at: Milestone v1.1 archived
+last_updated: "2026-04-18T09:17:50.808Z"
+last_activity: 2026-04-18
 progress:
-  total_phases: 8
-  completed_phases: 6
-  total_plans: 24
-  completed_plans: 18
-  percent: 75
+  total_phases: 0
+  completed_phases: 0
+  total_plans: 0
+  completed_plans: 0
+  percent: 100
 ---
 
 # Project State
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-04-16)
+See: .planning/PROJECT.md
 
 **Core value:** Editors can confidently upload, organize, and publish portfolio imagery without technical friction while visitors keep the polished category-first browsing experience.
-**Current focus:** Phase 07 — category-assignment-and-organization
+**Current focus:** Define the next milestone
 
 ## Current Position
 
-Phase: 07 (category-assignment-and-organization) — READY TO PLAN
+Phase: —
 Plan: —
-Status: Phase 06 approved and closed
-Last activity: 2026-04-17 -- Phase 06 Upload Workflow Foundation completed and approved
+Status: Milestone v1.1 archived; awaiting next milestone definition
+Last activity: 2026-04-18 -- v1.1 archived into `.planning/milestones/` and active planning docs reset for the next cycle
 
-Progress: [████████░░] 75%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 18
-- Average duration: 9.3 min
-- Total execution time: 2.8 hours
+- Last completed milestone: v1.1
+- Plans completed in archived milestone: 24
+- Tasks completed in archived milestone: 39
 
 **By Phase:**
 
-| Phase | Plans | Total | Avg/Plan |
-|-------|-------|-------|----------|
-| 01. Sanity Foundation | 3 | 0.6h | 12.7m |
-| 02. Data Layer Migration | 3 | 0.8h | 15.0m |
-| 03. Category Work Experience | 3 | 0.5h | 10.0m |
-| 04. Home Curation And Navigation | 3 | 0.8h | 15.7m |
-| 05. Legacy CMS Removal | 3 | 1.0h | 20.0m |
-| 06. Upload Workflow Foundation | 3 | 1.5h | 30.0m |
+- See `.planning/milestones/v1.1-ROADMAP.md` and `.planning/MILESTONES.md` for archived milestone detail.
 
 **Recent Trend:**
 
-- Last 5 plans: 05-02, 05-03, 06-01, 06-02, 06-03
-- Trend: Ready for Phase 07 planning
+- Trend: Current cycle closed; next action is milestone definition rather than more execution on the archived roadmap
 
 *Updated after each plan completion*
-| Phase 02 P01 | 9min | 2 tasks | 7 files |
-| Phase 02 P02 | 28min | 2 tasks | 4 files |
-| Phase 02 P03 | 8min | 2 tasks | 5 files |
-| Phase 03 P01 | 3min | 2 tasks | 6 files |
-| Phase 03 P02 | 2min | 2 tasks | 4 files |
-| Phase 03 P03 | 25min | 2 tasks | 6 files |
-| Phase 04 P01 | 14min | 2 tasks | 2 files |
-| Phase 04 P02 | 8min | 2 tasks | 5 files |
-| Phase 04 P03 | 25min | 2 tasks | 7 files |
-| Phase 05 P01 | 20min | 2 tasks | 9 files |
-| Phase 05 P02 | 18min | 2 tasks | 9 files |
-| Phase 05 P03 | 35min | 2 tasks | 10 files |
-| Phase 06 P01 | 15min | 2 tasks | 3 files |
-| Phase 06 P02 | 55min | 2 tasks | 8 files |
-| Phase 06 P03 | 20min | 2 tasks | 7 files |
+
+- Archive retained in `.planning/milestones/`
 
 ## Accumulated Context
 
@@ -109,17 +88,22 @@ Recent decisions affecting current work:
 - [Phase 06]: Studio now exposes dedicated `Upload Photos` and `Organize Photos` tools instead of relying on one-document-at-a-time `galleryItem` editing for basic intake.
 - [Phase 06]: Plain-language labels such as `Description` and slot-based category selection are part of the core editor workflow, not optional polish.
 - [Phase 06]: Initial bulk organization landed during the upload-foundation phase, reducing Phase 07 to reassignment, filtering, and recovery-focused improvements.
+- [Phase 07]: The organizer now keeps `Unassigned`, the three category slots, and bulk actions in one visual workspace instead of a one-way assignment list.
+- [Phase 07]: Search/filter helpers are now part of the core organization workflow so editors can isolate unsorted, hidden, or homepage photos quickly.
+- [Phase 08]: Placement status is now explained directly on each photo card through badges and plain-language summaries.
+- [Phase 08]: Category page ordering now has its own organizer-managed `categoryOrder` field instead of borrowing homepage order.
+- [Milestone v1.1]: The milestone was archived on 2026-04-18 and active planning docs were reset for next-milestone definition.
 
 ### Pending Todos
 
-None yet.
+None.
 
 ### Blockers/Concerns
 
-- Need a later CMS phase for non-Work editorial images such as the About/profile photo
+- A later CMS phase is still needed for non-Work editorial images such as the About/profile photo.
 
 ## Session Continuity
 
 Last session: 2026-04-17T09:00:00Z
-Stopped at: Phase 06 complete
+Stopped at: Milestone v1.1 archived
 Resume file: None

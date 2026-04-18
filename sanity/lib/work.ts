@@ -28,6 +28,7 @@ type WorkGalleryItemRecord = {
   isVisible: boolean;
   showOnHomePage: boolean;
   homePageOrder?: number;
+  categoryOrder?: number;
   category?: {
     _id: string;
     title: string;
@@ -67,6 +68,7 @@ function toWorkGalleryItem(record: WorkGalleryItemRecord): WorkGalleryItem | nul
     isVisible: record.isVisible,
     showOnHomePage: record.showOnHomePage,
     homePageOrder: record.homePageOrder,
+    categoryOrder: record.categoryOrder,
     category: {
       id: record.category._id,
       title: record.category.title,

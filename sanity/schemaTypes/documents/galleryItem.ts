@@ -58,6 +58,22 @@ export const galleryItem = defineType({
       description: "Leave this blank to keep the photo in Unassigned until you're ready to sort it.",
     }),
     defineField({
+      name: "categoryOrder",
+      title: "Category Order",
+      type: "number",
+      hidden: ({ document }) => !document?.category,
+      readOnly: true,
+      description: "Managed automatically from Organize Photos to control the order on category pages.",
+      validation: (rule) =>
+        rule.integer().custom((value, context) => {
+          if (!context.document?.category || value === undefined) {
+            return true;
+          }
+
+          return value >= 1 ? true : "Category order must be at least 1.";
+        }),
+    }),
+    defineField({
       name: "isVisible",
       title: "Visible On Site",
       type: "boolean",
@@ -71,7 +87,7 @@ export const galleryItem = defineType({
       type: "boolean",
       initialValue: false,
       hidden: ({ document }) => !document?.category,
-      description: "Turn this on after the photo has been assigned to a category.",
+      description: "Turn this on after the photo has been assigned to a category and is ready for the homepage.",
       validation: (rule) =>
         rule.required().custom((value, context) => {
           if (value && !context.document?.category) {
@@ -86,6 +102,8 @@ export const galleryItem = defineType({
       title: "Home Page Order",
       type: "number",
       hidden: ({ document }) => !document?.category || !document?.showOnHomePage,
+      readOnly: true,
+      description: "Managed automatically from Organize Photos to control the homepage sequence.",
       validation: (rule) =>
         rule.integer().custom((value, context) => {
           if (!context.document?.showOnHomePage) {
