@@ -1,0 +1,202 @@
+[ 5558333ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 5558378ms] [LOG] [HMR] connected @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 6621142ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 6621317ms] [LOG] [Fast Refresh] done in 179ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 6621424ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 6622061ms] [LOG] [Fast Refresh] done in 738ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 6630689ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 6630781ms] [ERROR] ./sanity/lib/work.ts:7:1
+Export legacyWorkGalleryItemsByProjectSlugQuery doesn't exist in target module
+   5 | import { client } from "./client";
+   6 | import { urlFor } from "./image";
+>  7 | import {
+     | ^^^^^^^^
+>  8 |   galleryItemsByCategorySlugQuery,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   homeWorkGalleryItemsQuery,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   legacyWorkGalleryItemsByProjectSlugQuery,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 |   legacyWorkGalleryItemsQuery,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   visibleWorkCategoriesQuery,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 13 | } from "./queries";
+     | ^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | type WorkCategoryRecord = {
+  16 |   _id: string;
+
+The export legacyWorkGalleryItemsByProjectSlugQuery was not found in module [project]/sanity/lib/queries.ts [app-rsc] (ecmascript).
+Did you mean to import galleryItemsByCategorySlugQuery?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./sanity/lib/work.ts
+    ./app/page.tsx @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 6630781ms] [ERROR] ./sanity/lib/work.ts:7:1
+Export legacyWorkGalleryItemsQuery doesn't exist in target module
+   5 | import { client } from "./client";
+   6 | import { urlFor } from "./image";
+>  7 | import {
+     | ^^^^^^^^
+>  8 |   galleryItemsByCategorySlugQuery,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   homeWorkGalleryItemsQuery,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   legacyWorkGalleryItemsByProjectSlugQuery,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 |   legacyWorkGalleryItemsQuery,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   visibleWorkCategoriesQuery,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 13 | } from "./queries";
+     | ^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | type WorkCategoryRecord = {
+  16 |   _id: string;
+
+The export legacyWorkGalleryItemsQuery was not found in module [project]/sanity/lib/queries.ts [app-rsc] (ecmascript).
+Did you mean to import homeWorkGalleryItemsQuery?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./sanity/lib/work.ts
+    ./app/page.tsx @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 6654719ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 6654756ms] [LOG] [Fast Refresh] done in 136ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 6654859ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 6654862ms] [LOG] [Fast Refresh] done in 103ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 6663861ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 6664197ms] [LOG] [Fast Refresh] done in 439ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 6771970ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 6772997ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=uCuHuOZLC_prFkcB2ZhB-' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[ 6774002ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=uCuHuOZLC_prFkcB2ZhB-' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[ 6775004ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=uCuHuOZLC_prFkcB2ZhB-' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[ 6776007ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=uCuHuOZLC_prFkcB2ZhB-' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[ 6777011ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=uCuHuOZLC_prFkcB2ZhB-' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[ 6782018ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=uCuHuOZLC_prFkcB2ZhB-' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[ 6787033ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=uCuHuOZLC_prFkcB2ZhB-' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[ 6792057ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=uCuHuOZLC_prFkcB2ZhB-' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[ 6797098ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=uCuHuOZLC_prFkcB2ZhB-' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[ 6802146ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=uCuHuOZLC_prFkcB2ZhB-' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[ 6807265ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=uCuHuOZLC_prFkcB2ZhB-' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[ 6812357ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=uCuHuOZLC_prFkcB2ZhB-' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[ 7209009ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 7209053ms] [LOG] [HMR] connected @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 7221225ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 7221308ms] [LOG] [Fast Refresh] done in 184ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 7240157ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 7240236ms] [LOG] [Fast Refresh] done in 179ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 7265418ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 7266268ms] [LOG] [Fast Refresh] done in 951ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 7287912ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 7287964ms] [LOG] [Fast Refresh] done in 155ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 8888169ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 8888191ms] [LOG] [Fast Refresh] done in 122ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 9412283ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 9412370ms] [LOG] [Fast Refresh] done in 189ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 9868470ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 9868625ms] [LOG] [Fast Refresh] done in 118ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 9868779ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 9868789ms] [LOG] [Fast Refresh] done in 111ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 9868931ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 9869461ms] [LOG] [Fast Refresh] done in 631ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 9975352ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 9975593ms] [ERROR] ./sanity/components/PhotoUploadTool.tsx:5:1
+Module not found: Can't resolve '@sanity/ui'
+  3 | import { useEffect, useRef, useState } from "react";
+  4 | import { CheckmarkCircleIcon, ImagesIcon, UploadIcon, WarningOutlineIcon } from "@sanity/icons";
+> 5 | import { Box, Button, Card, Flex, Grid, Inline, Spinner, Stack, Text } from "@sanity/ui";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { useClient } from "sanity";
+  7 |
+  8 | import { apiVersion } from "../env";
+
+Import traces:
+  Client Component Browser:
+    ./sanity/components/PhotoUploadTool.tsx [Client Component Browser]
+    ./sanity/photoUploadTool.tsx [Client Component Browser]
+    ./sanity.config.ts [Client Component Browser]
+    ./sanity.config.ts [Server Component]
+    ./app/studio/[[...tool]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./sanity/components/PhotoUploadTool.tsx [Client Component SSR]
+    ./sanity/photoUploadTool.tsx [Client Component SSR]
+    ./sanity.config.ts [Client Component SSR]
+    ./sanity.config.ts [Server Component]
+    ./app/studio/[[...tool]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 9997927ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 9997967ms] [ERROR] ./sanity/components/PhotoUploadTool.tsx:5:1
+Module not found: Can't resolve '@sanity/ui'
+  3 | import { useEffect, useRef, useState } from "react";
+  4 | import { CheckmarkCircleIcon, ImagesIcon, UploadIcon, WarningOutlineIcon } from "@sanity/icons";
+> 5 | import { Box, Button, Card, Flex, Grid, Inline, Spinner, Stack, Text } from "@sanity/ui";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { useClient } from "sanity";
+  7 |
+  8 | import { apiVersion } from "../env";
+
+Import traces:
+  Client Component Browser:
+    ./sanity/components/PhotoUploadTool.tsx [Client Component Browser]
+    ./sanity/photoUploadTool.tsx [Client Component Browser]
+    ./sanity.config.ts [Client Component Browser]
+    ./sanity.config.ts [Server Component]
+    ./app/studio/[[...tool]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./sanity/components/PhotoUploadTool.tsx [Client Component SSR]
+    ./sanity/photoUploadTool.tsx [Client Component SSR]
+    ./sanity.config.ts [Client Component SSR]
+    ./sanity.config.ts [Server Component]
+    ./app/studio/[[...tool]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[10017609ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[10020876ms] [LOG] [Fast Refresh] done in 3368ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[10021145ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[10021334ms] [LOG] [Fast Refresh] done in 289ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[10022101ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[10022651ms] [LOG] [Fast Refresh] done in 651ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[10061553ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[10061578ms] [LOG] [Fast Refresh] done in 95ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[10221641ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[10221654ms] [LOG] [Fast Refresh] done in 114ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[10395435ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[10395476ms] [LOG] [Fast Refresh] done in 143ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[10990085ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=dbXIsMKbXPwKpCyGoA3eC' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[10991088ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=dbXIsMKbXPwKpCyGoA3eC' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[10992090ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=dbXIsMKbXPwKpCyGoA3eC' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[10993093ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=dbXIsMKbXPwKpCyGoA3eC' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[10994096ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=dbXIsMKbXPwKpCyGoA3eC' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[10999101ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=dbXIsMKbXPwKpCyGoA3eC' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[11004112ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=dbXIsMKbXPwKpCyGoA3eC' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[11009129ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=dbXIsMKbXPwKpCyGoA3eC' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[11014159ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=dbXIsMKbXPwKpCyGoA3eC' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[11019199ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=dbXIsMKbXPwKpCyGoA3eC' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[11024329ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=dbXIsMKbXPwKpCyGoA3eC' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[11029614ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=dbXIsMKbXPwKpCyGoA3eC' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[12026200ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[12026245ms] [LOG] [HMR] connected @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[81485785ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[81486500ms] [LOG] [Fast Refresh] done in 814ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[81974540ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[81974567ms] [LOG] [Fast Refresh] done in 75ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[82857159ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[82857523ms] [LOG] [Fast Refresh] done in 446ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[82858169ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[82858249ms] [LOG] [Fast Refresh] done in 181ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[82867229ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[82867257ms] [LOG] [Fast Refresh] done in 74ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[82934910ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[82934939ms] [LOG] [Fast Refresh] done in 130ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[87141963ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[87141998ms] [LOG] [Fast Refresh] done in 136ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[87143019ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[87143022ms] [LOG] [Fast Refresh] done in 105ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297

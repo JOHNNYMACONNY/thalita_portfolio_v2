@@ -1,0 +1,92 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - link "Thalita Bueno" [ref=e4] [cursor=pointer]:
+      - /url: /
+      - heading "Thalita Bueno" [level=1] [ref=e5]
+    - navigation [ref=e6]:
+      - link "Work" [ref=e7] [cursor=pointer]:
+        - /url: /#portfolio
+      - link "Services" [ref=e8] [cursor=pointer]:
+        - /url: /services
+      - link "About" [ref=e9] [cursor=pointer]:
+        - /url: /about
+  - main [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e12]:
+        - generic [ref=e13]: Work
+        - generic [ref=e14]:
+          - generic [ref=e15]: 3 published categories
+          - generic [ref=e16]: Sanity-backed selection
+          - generic [ref=e17]: /work
+      - generic [ref=e18]:
+        - heading "Three bodies of work, one editorial language." [level=1] [ref=e19]
+        - paragraph [ref=e21]: Explore Thalita's published categories through image-led selections curated in Sanity. Each route opens a dedicated gallery without reviving the old project-story structure.
+    - generic [ref=e22]:
+      - article [ref=e23]:
+        - link "<3 editorial Category 01 Category 01 Editorial Fashion stories, styled narratives, and concept-driven imagery. Browse the gallery /work/editorial Explore" [ref=e24] [cursor=pointer]:
+          - /url: /work/editorial
+          - generic [ref=e25]:
+            - generic [ref=e26]:
+              - img "<3" [ref=e27]
+              - generic [ref=e29]:
+                - generic [ref=e30]: editorial
+                - generic [ref=e31]: Category 01
+            - generic [ref=e32]:
+              - generic [ref=e33]:
+                - generic [ref=e34]: Category 01
+                - heading "Editorial" [level=2] [ref=e35]
+                - paragraph [ref=e36]: Fashion stories, styled narratives, and concept-driven imagery.
+              - generic [ref=e37]:
+                - generic [ref=e38]:
+                  - generic [ref=e39]: Browse the gallery
+                  - generic [ref=e40]: /work/editorial
+                - generic [ref=e41]: Explore
+      - article [ref=e42]:
+        - link "<3 commercial Category 02 Category 02 Commercial Brand, campaign, and product-focused styling work. Browse the gallery /work/commercial Explore" [ref=e43] [cursor=pointer]:
+          - /url: /work/commercial
+          - generic [ref=e44]:
+            - generic [ref=e45]:
+              - img "<3" [ref=e46]
+              - generic [ref=e48]:
+                - generic [ref=e49]: commercial
+                - generic [ref=e50]: Category 02
+            - generic [ref=e51]:
+              - generic [ref=e52]:
+                - generic [ref=e53]: Category 02
+                - heading "Commercial" [level=2] [ref=e54]
+                - paragraph [ref=e55]: Brand, campaign, and product-focused styling work.
+              - generic [ref=e56]:
+                - generic [ref=e57]:
+                  - generic [ref=e58]: Browse the gallery
+                  - generic [ref=e59]: /work/commercial
+                - generic [ref=e60]: Explore
+      - article [ref=e61]:
+        - link "<3 personal styling Category 03 Category 03 Personal Styling Client wardrobe curation, personal shopping, and transformation work. Browse the gallery /work/personal-styling Explore" [ref=e62] [cursor=pointer]:
+          - /url: /work/personal-styling
+          - generic [ref=e63]:
+            - generic [ref=e64]:
+              - img "<3" [ref=e65]
+              - generic [ref=e67]:
+                - generic [ref=e68]: personal styling
+                - generic [ref=e69]: Category 03
+            - generic [ref=e70]:
+              - generic [ref=e71]:
+                - generic [ref=e72]: Category 03
+                - heading "Personal Styling" [level=2] [ref=e73]
+                - paragraph [ref=e74]: Client wardrobe curation, personal shopping, and transformation work.
+              - generic [ref=e75]:
+                - generic [ref=e76]:
+                  - generic [ref=e77]: Browse the gallery
+                  - generic [ref=e78]: /work/personal-styling
+                - generic [ref=e79]: Explore
+    - generic [ref=e80]:
+      - paragraph [ref=e81]: © 2026 Thalita Bueno. All rights reserved.
+      - generic [ref=e82]:
+        - link "Instagram" [ref=e83] [cursor=pointer]:
+          - /url: "#"
+        - link "LinkedIn" [ref=e84] [cursor=pointer]:
+          - /url: "#"
+        - link "Pinterest" [ref=e85] [cursor=pointer]:
+          - /url: "#"
+        - link "Email" [ref=e86] [cursor=pointer]:
+          - /url: mailto:hello@thalitabueno.com

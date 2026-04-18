@@ -1,8 +1,8 @@
 ---
 phase: 03
 plan: 03-03
-status: awaiting-human-verification
-last_updated: 2026-04-14
+status: approved
+last_updated: 2026-04-16
 ---
 
 # Phase 03 UAT: Work Route Verification
@@ -38,30 +38,30 @@ This UAT is intentionally split between:
 
 ### 1. Work Landing Page
 
-- [ ] Open `/work`.
-- [ ] Confirm exactly three category cards render.
-- [ ] Confirm the titles are `Editorial`, `Commercial`, and `Personal Styling`.
-- [ ] Confirm each card shows a cover image and an `Explore` affordance.
-- [ ] Confirm the layout feels composed on both desktop and mobile widths.
+- [x] Open `/work`.
+- [x] Confirm exactly three category cards render.
+- [x] Confirm the titles are `Editorial`, `Commercial`, and `Personal Styling`.
+- [x] Confirm each card shows a cover image and an `Explore` affordance.
+- [x] Confirm the layout feels composed on both desktop and mobile widths.
 
 ### 2. Zero-Item Category States
 
-- [ ] Open `/work/editorial` before adding any new gallery items.
-- [ ] Open `/work/commercial` before adding any new gallery items.
-- [ ] Open `/work/personal-styling` before adding any new gallery items.
-- [ ] Confirm each page shows category identity clearly.
-- [ ] Confirm the empty state reads as intentional editorial copy, not a broken grid.
-- [ ] Confirm no cache-busting workaround or code change was needed to see the empty state.
+- [x] Open `/work/editorial` before adding any new gallery items.
+- [x] Open `/work/commercial` before adding any new gallery items.
+- [x] Open `/work/personal-styling` before adding any new gallery items.
+- [x] Confirm each page shows category identity clearly.
+- [x] Confirm the empty state reads as intentional editorial copy, not a broken grid.
+- [x] Confirm no cache-busting workaround or code change was needed to see the empty state.
 
 ### 3. Live Published Item From Studio
 
-- [ ] Open `/studio`.
-- [ ] Create one visible `galleryItem`.
-- [ ] Assign it to exactly one category.
-- [ ] Publish it.
-- [ ] Refresh the matching `/work/[slug]` route.
-- [ ] Confirm the image appears in the correct category gallery.
-- [ ] Confirm no code change, server restart, or cache-busting workaround was needed beyond a normal page refresh.
+- [x] Open `/studio`.
+- [x] Create one visible `galleryItem`.
+- [x] Assign it to exactly one category.
+- [x] Publish it.
+- [x] Refresh the matching `/work/[slug]` route.
+- [x] Confirm the image appears in the correct category gallery.
+- [x] Confirm no code change, server restart, or cache-busting workaround was needed beyond a normal page refresh.
 
 ## Verification Record
 
@@ -74,13 +74,16 @@ This UAT is intentionally split between:
 
 ### Live-Item Review
 
-- Tested category slug:
-- Gallery item title:
-- Result:
-- Appeared after normal refresh only: `yes | no`
-- Notes:
+- Date: 2026-04-16
+- Reviewer: User confirmation in local Studio/browser
+- Tested category slug: `editorial`
+- Gallery item title: `test`
+- Result: PASS
+- Appeared after normal refresh only: `yes`
+- Notes: The newly published editorial item appeared on `/work/editorial` after a normal page refresh. A separate console error on `/` continued to come from the legacy homepage `PortfolioGrid` path and is deferred to Phase 4.
 
 ## Outcome
 
-- Final approval status: `pending`
+- Final approval status: `approved`
 - Follow-up issues:
+  - Homepage `/` still logs the known legacy `PortfolioGrid received 0 projects` warning while the home experience remains on the Phase 4 data path.

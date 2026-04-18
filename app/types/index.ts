@@ -69,14 +69,6 @@ export interface WorkCategory {
     coverAlt: string;
 }
 
-export interface WorkGalleryItemLegacyBridge {
-    projectSlug?: string;
-    projectTitle?: string;
-    sourceFile?: string;
-    imageRole?: "cover" | "gallery";
-    featuredOrder?: number;
-}
-
 export interface WorkGalleryItem {
     id: string;
     title?: string;
@@ -87,36 +79,7 @@ export interface WorkGalleryItem {
     homePageOrder?: number;
     image: SanityImageValue;
     category: Pick<WorkCategory, "id" | "title" | "slug" | "displayOrder">;
-    legacy?: WorkGalleryItemLegacyBridge;
 }
-
-export interface ProjectImage {
-    src: string;
-    alt: string;
-    width?: number;
-    height?: number;
-}
-
-export interface LegacyProjectBridge {
-    id: string;
-    slug: string;
-    title: string;
-    client?: string;
-    featuredOrder?: number;
-    role: string;
-    year: string;
-    description: string;
-    categories: string[];
-    coverImage: string;
-    coverAlt?: string;
-    credits: ProjectCredit[];
-    images: ProjectImage[];
-    isFeatured: boolean;
-    isHidden?: boolean;
-    youtubeUrl?: string;
-}
-
-export type Project = LegacyProjectBridge;
 
 export interface AboutContent {
     bio: string; // Markdown string from CMS

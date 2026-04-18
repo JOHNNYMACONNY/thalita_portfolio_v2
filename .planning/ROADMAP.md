@@ -2,7 +2,7 @@
 
 ## Overview
 
-This roadmap moves the existing portfolio from markdown-backed project pages to a Sanity-backed category and image gallery without discarding the current site shell or editorial presentation. The work starts by establishing Sanity as a safe parallel content source, then migrates Work routing and homepage curation, and finally removes legacy project and Decap infrastructure once the new flow is proven.
+This roadmap now moves from migration work into editor-experience hardening. The public portfolio is already category-first and Sanity-backed; the new milestone focuses on making image uploads, category assignment, and placement management simple enough for a non-technical editor to use confidently.
 
 ## Phases
 
@@ -14,9 +14,12 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Sanity Foundation** - Add Sanity Studio, schema, and client configuration for category and gallery item content
 - [x] **Phase 2: Data Layer Migration** - Replace markdown portfolio reads with Sanity queries and establish a fresh-start Work dataset workflow
-- [ ] **Phase 3: Category Work Experience** - Build the new Work landing page and category gallery routes
-- [ ] **Phase 4: Home Curation And Navigation** - Shift homepage Work content to curated gallery items and repoint navigation
-- [ ] **Phase 5: Legacy CMS Removal** - Remove old project routes, Decap CMS, and leftover Work-specific legacy dependencies
+- [x] **Phase 3: Category Work Experience** - Build the new Work landing page and category gallery routes
+- [x] **Phase 4: Home Curation And Navigation** - Shift homepage Work content to curated gallery items and repoint navigation
+- [x] **Phase 5: Legacy CMS Removal** - Remove old project routes, Decap CMS, and leftover Work-specific legacy dependencies
+- [x] **Phase 6: Upload Workflow Foundation** - Simplify photo intake and establish a friendly image-management surface
+- [ ] **Phase 7: Category Assignment And Organization** - Make category sorting and bulk photo organization visual and fast
+- [ ] **Phase 8: Placement And Publishing Controls** - Make homepage/category placement and ordering obvious before publishing
 
 ## Phase Details
 
@@ -46,9 +49,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — Move active Work reads to Sanity helpers while preserving the overlap routes
-- [ ] 02-02-PLAN.md — Replace legacy import assumptions with a fresh-start dataset bootstrap and approval flow
-- [ ] 02-03-PLAN.md — Audit fresh-start data behavior and document the manual editorial workflow
+- [x] 02-01-PLAN.md — Move active Work reads to Sanity helpers while preserving the overlap routes
+- [x] 02-02-PLAN.md — Replace legacy import assumptions with a fresh-start dataset bootstrap and approval flow
+- [x] 02-03-PLAN.md — Audit fresh-start data behavior and document the manual editorial workflow
 
 ### Phase 3: Category Work Experience
 **Goal**: Visitors can browse Work through a landing page of category cards and category-specific image galleries.
@@ -61,9 +64,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 03-01: Add `/work` landing route and category card presentation
-- [ ] 03-02: Add category gallery route and gallery rendering components
-- [ ] 03-03: Tune responsive behavior, empty states, and loading/error handling for new Work routes
+- [x] 03-01: Add `/work` landing route and category card presentation
+- [x] 03-02: Add category gallery route and gallery rendering components
+- [x] 03-03: Tune responsive behavior, empty states, and loading/error handling for new Work routes
 
 ### Phase 4: Home Curation And Navigation
 **Goal**: The homepage and site navigation reflect the new Work structure without changing the site's overall aesthetic.
@@ -76,9 +79,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 04-01: Replace the home Work grid data source with curated Sanity gallery items
-- [ ] 04-02: Update navigation and CTA links away from `/#portfolio`
-- [ ] 04-03: Verify homepage curation behavior across desktop and mobile layouts
+- [x] 04-01: Replace the home Work grid data source with curated Sanity gallery items
+- [x] 04-02: Update navigation and CTA links away from `/#portfolio`
+- [x] 04-03: Verify homepage curation behavior across desktop and mobile layouts
 
 ### Phase 5: Legacy CMS Removal
 **Goal**: The repo is cleaned of obsolete Work routes and Decap CMS infrastructure after the Sanity-backed flow is verified.
@@ -91,19 +94,68 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 05-01: Remove obsolete Work routes and unused presentation components
-- [ ] 05-02: Remove Decap CMS assets, scripts, rewrites, and identity integration no longer needed
-- [ ] 05-03: Finalize image config, cleanup leftover markdown portfolio content, and run regression verification
+- [x] 05-01: Remove obsolete Work routes and unused presentation components
+- [x] 05-02: Remove Decap CMS assets, scripts, rewrites, and identity integration no longer needed
+- [x] 05-03: Finalize image config, cleanup leftover markdown portfolio content, and run regression verification
+
+### Phase 6: Upload Workflow Foundation
+**Goal**: The editor can upload many photos at once through a much simpler, photo-first workflow.
+**Depends on**: Phase 5
+**Requirements**: UPL-01, UPL-02, UPL-03, EDT-01
+**Success Criteria** (what must be TRUE):
+1. Editor can batch upload multiple images in a single session without relying on one-document-at-a-time entry
+2. Upload feedback clearly communicates progress, success, and failure states
+3. Newly uploaded images can remain safely unassigned until the editor is ready to sort them
+4. The workflow uses plain-language labels instead of exposing raw CMS concepts as the primary interaction
+**Plans**: 3 plans
+
+Plans:
+- [x] 06-01: Define the simplified upload model, plain-language labels, and editor-facing image states
+- [x] 06-02: Build the batch upload surface and unassigned-image intake flow
+- [x] 06-03: Verify the upload experience for a non-technical editor and clean up rough edges
+
+### Phase 7: Category Assignment And Organization
+**Goal**: The editor can sort uploaded photos into categories quickly using a visual, bulk-friendly organizer.
+**Depends on**: Phase 6
+**Requirements**: ORG-01, ORG-02, ORG-03
+**Success Criteria** (what must be TRUE):
+1. Editor can see all three Work categories as obvious destinations while organizing photos
+2. Editor can bulk assign, reassign, or clear category placement without repetitive single-image edits
+3. Editor can quickly find unassigned or still-unsorted images
+**Plans**: 3 plans
+
+Plans:
+- [ ] 07-01: Add a visual organizer with category slots and an unassigned tray
+- [ ] 07-02: Add bulk actions, filtering, and reassignment flows for large image sets
+- [ ] 07-03: Polish the organizer with safe empty states, confirmations, and recovery paths
+
+### Phase 8: Placement And Publishing Controls
+**Goal**: The editor can understand and control exactly where each image appears on the site before publishing.
+**Depends on**: Phase 7
+**Requirements**: PLC-01, PLC-02, PLC-03
+**Success Criteria** (what must be TRUE):
+1. Editor can tell whether each image is hidden, visible on category pages, or featured on the homepage
+2. Editor can reorder homepage and category placements through a visual interaction
+3. Manual verification confirms that the final workflow is intuitive enough for Thalita's real maintenance tasks
+**Plans**: 3 plans
+
+Plans:
+- [ ] 08-01: Expose clear placement badges and destination controls for each image
+- [ ] 08-02: Add visual ordering for homepage and category display sequences
+- [ ] 08-03: Run end-to-end editor UAT and finalize milestone documentation
 
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 2 → 2.1 → 2.2 → 3 → 3.1 → 4
+Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Sanity Foundation | 3/3 | Complete | 2026-04-14 |
 | 2. Data Layer Migration | 3/3 | Complete | 2026-04-14 |
-| 3. Category Work Experience | 2/3 | In progress | - |
-| 4. Home Curation And Navigation | 0/3 | Not started | - |
-| 5. Legacy CMS Removal | 0/3 | Not started | - |
+| 3. Category Work Experience | 3/3 | Complete | 2026-04-16 |
+| 4. Home Curation And Navigation | 3/3 | Complete | 2026-04-16 |
+| 5. Legacy CMS Removal | 3/3 | Complete | 2026-04-16 |
+| 6. Upload Workflow Foundation | 3/3 | Complete | 2026-04-17 |
+| 7. Category Assignment And Organization | 0/3 | Planned | - |
+| 8. Placement And Publishing Controls | 0/3 | Planned | - |

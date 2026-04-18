@@ -5,22 +5,10 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "res.cloudinary.com",
-      },
-      {
-        protocol: "https",
         hostname: "cdn.sanity.io",
       },
     ],
     unoptimized: true,
-  },
-  async rewrites() {
-    return [
-      {
-        source: "/admin",
-        destination: "/admin/index.html",
-      },
-    ];
   },
 };
 

@@ -8,11 +8,6 @@ const galleryItemProjection = `
   isVisible,
   showOnHomePage,
   homePageOrder,
-  legacyProjectSlug,
-  legacyProjectTitle,
-  legacySourceFile,
-  legacyImageRole,
-  legacyFeaturedOrder,
   "category": category->{
     _id,
     title,
@@ -34,7 +29,7 @@ export const visibleWorkCategoriesQuery = defineQuery(`
 `);
 
 export const homeWorkGalleryItemsQuery = defineQuery(`
-  *[_type == "galleryItem" && isVisible == true && showOnHomePage == true]
+  *[_type == "galleryItem" && isVisible == true && showOnHomePage == true && defined(category)]
     | order(homePageOrder asc, _createdAt asc) {
       ${galleryItemProjection}
     }
@@ -43,20 +38,6 @@ export const homeWorkGalleryItemsQuery = defineQuery(`
 export const galleryItemsByCategorySlugQuery = defineQuery(`
   *[_type == "galleryItem" && isVisible == true && category->slug.current == $slug]
     | order(coalesce(homePageOrder, 999) asc, _createdAt asc) {
-      ${galleryItemProjection}
-    }
-`);
-
-export const legacyWorkGalleryItemsQuery = defineQuery(`
-  *[_type == "galleryItem" && isVisible == true && defined(legacyProjectSlug)]
-    | order(coalesce(legacyFeaturedOrder, 999) asc, legacyProjectTitle asc, _createdAt asc) {
-      ${galleryItemProjection}
-    }
-`);
-
-export const legacyWorkGalleryItemsByProjectSlugQuery = defineQuery(`
-  *[_type == "galleryItem" && isVisible == true && legacyProjectSlug == $slug]
-    | order(coalesce(legacyFeaturedOrder, 999) asc, legacyImageRole asc, _createdAt asc) {
       ${galleryItemProjection}
     }
 `);

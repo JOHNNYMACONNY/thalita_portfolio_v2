@@ -2,63 +2,75 @@
 
 ## What This Is
 
-This project is an editorial portfolio site for Thalita Bueno built in Next.js. The current site already ships a file-based portfolio, services, about, and contact experience; the active initiative is to replace the project-centric Work implementation with a Sanity-backed, category-and-image-centric gallery while preserving the site's visual identity.
+This project is now a Sanity-backed editorial portfolio site for Thalita Bueno built in Next.js. The public site already ships a category-first Work experience with curated homepage imagery, and the new initiative is to make photo uploading and organization simple enough for a non-technical editor to manage confidently.
 
-The intended end state is a home page that shows a curated set of images, a dedicated Work landing page with three category cards, and category pages that display all images in each category. Decap CMS and the old markdown project model will be retired once the Sanity-backed flow is live and verified.
+The next milestone focuses on editor experience rather than visitor-facing redesign: faster batch uploads, clearer category placement, and a much more intuitive way to control which images appear where on the site.
 
 ## Core Value
 
-Editors can manage a polished portfolio gallery through Sanity while visitors browse a cleaner, category-driven Work experience without losing the site's existing aesthetic quality.
+Editors can confidently upload, organize, and publish portfolio imagery without technical friction while visitors keep the polished category-first browsing experience.
+
+## Current Milestone: v1.1 Simple Photo Management
+
+**Goal:** Make image uploading and placement so intuitive that Thalita can manage the site comfortably without needing CMS expertise.
+
+**Target features:**
+- Batch upload many images in one session with clear progress and recovery feedback
+- Show the three category destinations as obvious visual slots instead of abstract CMS fields
+- Support fast bulk organization, reassignment, and cleanup of uploaded photos
+- Make homepage/category placement and ordering visible enough that editors always know what is live on the site
 
 ## Requirements
 
 ### Validated
 
 - ✓ Home, about, services, and contact pages render in the current Next.js App Router site — existing
-- ✓ The current site can display portfolio cards and project detail pages from local markdown content — existing
-- ✓ The site already supports editorial image presentation, custom typography, and animated navigation patterns — existing
 - ✓ Contact form submission is wired through Netlify forms — existing
+- ✓ Visitors can browse Work through `/work` and category-specific gallery pages — Phase 03
+- ✓ Editors can manage Work categories and gallery items in Sanity Studio — Phase 01
+- ✓ The homepage renders curated Sanity gallery items and shared Work navigation points to `/work` — Phase 04
+- ✓ Legacy markdown Work routes, Decap CMS, and obsolete Work bridge code have been removed — Phase 05
 
 ### Active
 
-- [ ] Replace markdown project loading with a Sanity-backed content model for categories and gallery items
-- [ ] Convert Work into a landing page with three category cards and dedicated category gallery pages
-- [ ] Curate homepage gallery content through a CMS flag instead of rendering every project
-- [ ] Remove legacy project detail pages and Decap CMS once the new flow is stable
+- [ ] Batch upload photos into the Work library with clear progress, thumbnail feedback, and failure recovery
+- [ ] Show uploaded images in a visual organizer with clear `Unassigned` and category-slot states
+- [ ] Let editors bulk assign, reassign, hide, and organize images without editing one document at a time
+- [ ] Make homepage/category placement and ordering obvious enough that editors always know what will show on the live site
 
 ### Out of Scope
 
-- Keeping `/work/[slug]` project story pages — the new information architecture is category/image-centric
-- Rebuilding About, Services, or Contact around Sanity in this initiative — those can remain on current content storage unless later prioritized
-- Redesigning the site's established editorial visual language — preserve the current look while changing data flow and route structure
-- Expanding the Work taxonomy beyond three canonical categories during this migration — lock scope so route and CMS work stay focused
+- Redesigning the public portfolio UI during this milestone — the current site experience is already in a good place and this work is editor-facing
+- Expanding beyond the three current Work categories — the editor UX should simplify the existing IA, not reopen taxonomy scope
+- Moving About, Services, or Contact content into Sanity during this milestone — this cycle is focused on image-management friction inside Work
+- Replacing Sanity Studio with a separate admin app — the goal is to simplify the existing system, not create a second CMS
 
 ## Context
 
-This is a brownfield Next.js 16 portfolio using App Router, TypeScript, Tailwind v4, and Framer Motion. Today the portfolio content is stored as markdown files in `content/projects/*.md` and read synchronously via `lib/api.ts`, while Decap CMS under `public/admin/` writes those markdown and JSON files through Netlify Git Gateway and Netlify Identity.
+The site has completed its migration from markdown-backed Work content to a Sanity-backed category and gallery model. The public browsing experience is now stable: homepage curation is live, `/work` is category-first, and legacy `/admin`, markdown project files, and temporary bridge code have been removed.
 
-The current Work experience is project-centric: the home page renders all visible projects, each card links to `/work/[slug]`, and the detail page renders project metadata plus any gallery images attached to that markdown document. There is also an older disconnected `app/portfolio/page.tsx` route with hardcoded Cloudinary content that should be removed during the migration.
+The remaining problem is editor usability. Thalita is non-technical and will likely be updating images, category assignments, and homepage visibility herself. The current data model works, but the default CMS experience still asks the editor to think in document/reference terms rather than in the natural mental model of "upload photos, sort them into categories, and choose what shows on the site."
 
-The approved direction is category/image-centric: home page stays visually familiar but becomes curated through a `showOnHomePage`-style flag, navigation points to a new `/work` landing page, category cards lead to category-specific image galleries, and Sanity becomes the source of truth for categories and gallery items. The migration should also remove Decap CMS, Netlify Identity usage tied to Decap, and the old markdown portfolio content after parity is verified.
+The next milestone should therefore concentrate on custom editorial affordances inside the existing Studio workflow: batch intake, clear category slots, bulk operations, and placement clarity. Research references for this direction are captured in `.planning/research/v1.1-simple-photo-management.md`.
 
 ## Constraints
 
-- **Tech stack**: Continue using the existing Next.js App Router site — the migration should fit the current frontend architecture rather than replace the app shell
-- **Visual continuity**: Preserve the established editorial styling and motion language — this is a content architecture migration, not a visual redesign
-- **Route simplicity**: Work should resolve to `/work` plus category pages — avoid ambiguous coexistence with legacy `/work/[slug]`
-- **CMS scope**: Sanity must manage categories and gallery items as first-class content — category cover images and homepage curation cannot remain hardcoded
-- **Migration safety**: Remove Decap only after the Sanity-backed routes are working — avoid a gap where editors lose content management before the new path is live
-- **Image delivery**: Next image configuration must support Sanity CDN assets — remote image handling needs to be updated during the migration
+- **Tech stack**: Stay inside the existing Next.js + Sanity setup — simplify the current editor workflow instead of introducing a separate management product
+- **Public-site stability**: Keep the live visitor experience stable while editor tooling evolves — this milestone should improve maintenance without reopening finished frontend migration work
+- **Non-technical editor UX**: Optimize for plain-language actions and thumbnail-driven organization — Thalita should not need to understand slugs, references, or CMS internals
+- **Scope discipline**: Preserve the existing three-category Work information architecture — the milestone is about easier management, not broader content modeling
+- **Image-led interaction**: Prefer drag-and-drop, bulk actions, and visual placement cues — numerical ordering and single-record editing should be implementation details, not the primary workflow
 
 ## Key Decisions
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Use a category/image-centric model instead of the current project-centric model | Matches the desired visitor flow and simplifies Work into landing + category pages | — Pending |
-| Remove legacy `/work/[slug]` detail pages | They conflict with the new IA and add migration complexity without serving the approved end state | — Pending |
-| Use Sanity for `category` and `galleryItem` documents | Editors need first-class category management, cover images, and homepage curation | — Pending |
-| Keep non-Work content on current storage for now | Limits scope so the migration can focus on Work architecture and CMS replacement | — Pending |
-| Treat homepage curation as CMS-driven via a boolean flag and explicit ordering | Prevents the home page from rendering the full gallery while giving editorial control | — Pending |
+| Use a category/image-centric model instead of the old project-centric Work model | Matches the approved visitor flow and simplified Work IA | ✓ Good |
+| Remove legacy `/work/[slug]` detail pages and Decap CMS | Avoids duplicate systems and keeps the live stack coherent | ✓ Good |
+| Keep non-Work content on current storage for now | Limited the migration scope so Work could land cleanly first | ✓ Good |
+| Treat homepage curation as CMS-driven and explicitly ordered | Gave editorial control without cluttering the public site | ✓ Good |
+| Build the next milestone around editor workflow, not public redesign | The primary remaining pain is maintenance friction for a non-technical editor | — Pending |
+| Prefer a custom Studio management surface over raw document editing for images | The natural workflow is photo-first and bulk-oriented rather than form-first | — Pending |
 
 ## Evolution
 
@@ -78,4 +90,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-04-13 after initialization*
+*Last updated: 2026-04-16 after starting milestone v1.1 Simple Photo Management*

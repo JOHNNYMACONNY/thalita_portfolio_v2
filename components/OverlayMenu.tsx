@@ -45,11 +45,11 @@ export default function OverlayMenu() {
                                 Home
                             </Link>
                             <Link
-                                href="#portfolio"
+                                href="/work"
                                 onClick={toggleMenu}
                                 className="font-heading text-4xl md:text-5xl text-charcoal hover:text-mocha transition-colors"
                             >
-                                Portfolio
+                                Work
                             </Link>
                             <Link
                                 href="#about"
