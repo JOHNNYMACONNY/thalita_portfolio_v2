@@ -1,17 +1,17 @@
 ---
 gsd_state_version: 1.0
-milestone: v1.1
-milestone_name: simple-photo-management
-status: archived
-stopped_at: Milestone v1.1 archived
-last_updated: "2026-04-18T09:17:50.808Z"
+milestone: v1.2
+milestone_name: studio-publishing-workflow
+status: in_progress
+stopped_at:
+last_updated: "2026-04-18T10:42:00.000Z"
 last_activity: 2026-04-18
 progress:
-  total_phases: 0
-  completed_phases: 0
-  total_plans: 0
-  completed_plans: 0
-  percent: 100
+  total_phases: 3
+  completed_phases: 2
+  total_plans: 9
+  completed_plans: 6
+  percent: 67
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md
 
 **Core value:** Editors can confidently upload, organize, and publish portfolio imagery without technical friction while visitors keep the polished category-first browsing experience.
-**Current focus:** Define the next milestone
+**Current focus:** Plan Phase 11 milestone closure around the remaining live verification step
 
 ## Current Position
 
-Phase: —
+Phase: 11 - Publish Verification And Closure
 Plan: —
-Status: Milestone v1.1 archived; awaiting next milestone definition
-Last activity: 2026-04-18 -- v1.1 archived into `.planning/milestones/` and active planning docs reset for the next cycle
+Status: In progress
+Last activity: 2026-04-18 -- captured Phase 11 context for verification and closure
 
-Progress: [██████████] 100%
+Progress: [██████░░░░] 67%
 
 ## Performance Metrics
 
@@ -46,7 +46,7 @@ Progress: [██████████] 100%
 
 **Recent Trend:**
 
-- Trend: Current cycle closed; next action is milestone definition rather than more execution on the archived roadmap
+- Trend: Studio publishing implementation is in place; milestone closure now depends on authenticated live verification
 
 *Updated after each plan completion*
 
@@ -93,17 +93,19 @@ Recent decisions affecting current work:
 - [Phase 08]: Placement status is now explained directly on each photo card through badges and plain-language summaries.
 - [Phase 08]: Category page ordering now has its own organizer-managed `categoryOrder` field instead of borrowing homepage order.
 - [Milestone v1.1]: The milestone was archived on 2026-04-18 and active planning docs were reset for next-milestone definition.
+- [Milestone v1.2]: The next milestone focuses on closing the publish handoff gap inside Studio before expanding CMS scope elsewhere.
+- [Phase 09-10]: The organizer now merges draft and published documents by base ID, shows publish readiness, edits draft state through Sanity document actions, and can publish selected ready photos in bulk.
 
 ### Pending Todos
 
-None.
+- Run the manual checks in `.planning/phases/11-publish-verification-and-closure/11-UAT.md`
 
 ### Blockers/Concerns
 
-- A later CMS phase is still needed for non-Work editorial images such as the About/profile photo.
+- Final milestone closure still requires an authenticated Studio publish check against the real dataset.
 
 ## Session Continuity
 
 Last session: 2026-04-17T09:00:00Z
-Stopped at: Milestone v1.1 archived
+Stopped at: Publish workflow implemented; manual Studio verification pending
 Resume file: None
