@@ -1,5 +1,7 @@
 import { defineField, defineType } from "sanity";
 
+import { CategoryReferenceInput } from "../../components/CategoryReferenceInput";
+
 export const galleryItem = defineType({
   name: "galleryItem",
   title: "Gallery Item",
@@ -46,6 +48,9 @@ export const galleryItem = defineType({
       title: "Category",
       type: "reference",
       to: [{ type: "category" }],
+      components: {
+        input: CategoryReferenceInput,
+      },
       options: {
         disableNew: true,
       },
