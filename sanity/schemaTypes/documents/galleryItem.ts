@@ -38,9 +38,10 @@ export const galleryItem = defineType({
     }),
     defineField({
       name: "alt",
-      title: "Alt Text",
+      title: "Description",
       type: "string",
-      description: "Describe the image for accessibility. The upload tool can prefill this so you can refine it later.",
+      description:
+        "Write a short description of the photo so visitors using screen readers can understand what is shown.",
       validation: (rule) => rule.required(),
     }),
     defineField({

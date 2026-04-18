@@ -12,6 +12,7 @@ type CategoryOption = {
   title: string;
   slug: string;
   displayOrder: number;
+  coverImageUrl?: string;
 };
 
 type SelectedPreview = {
@@ -51,7 +52,8 @@ const CATEGORY_QUERY = `*[_type == "category"] | order(displayOrder asc) {
   _id,
   title,
   "slug": slug.current,
-  displayOrder
+  displayOrder,
+  "coverImageUrl": coverImage.asset->url
 }`;
 
 const UNASSIGNED_DESTINATION = "__unassigned__";
@@ -231,7 +233,7 @@ export function PhotoUploadTool() {
             </Text>
             <Text muted size={1}>
               The upload tool automatically creates draft photo records with a starter label and alt
-              text based on the file name, so you can refine details after the upload finishes.
+              description based on the file name, so you can refine details after the upload finishes.
             </Text>
           </Stack>
         </Card>
@@ -283,11 +285,28 @@ export function PhotoUploadTool() {
                     tone={destination === category._id ? "primary" : "transparent"}
                   >
                     <Stack space={2}>
+                      {category.coverImageUrl ? (
+                        <>
+                          {/* Visual destination cards make category choice easier for non-technical editors. */}
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            alt={category.title}
+                            src={category.coverImageUrl}
+                            style={{
+                              aspectRatio: "4 / 3",
+                              borderRadius: "8px",
+                              display: "block",
+                              objectFit: "cover",
+                              width: "100%",
+                            }}
+                          />
+                        </>
+                      ) : null}
                       <Text size={2} weight="semibold">
-                        {category.title}
+                        Slot {category.displayOrder}: {category.title}
                       </Text>
                       <Text muted size={1}>
-                        Slot {category.displayOrder} • /work/{category.slug}
+                        /work/{category.slug}
                       </Text>
                     </Stack>
                   </Card>

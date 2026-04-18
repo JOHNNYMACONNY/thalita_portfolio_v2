@@ -10,6 +10,7 @@ Verify that:
 
 - the new Studio upload flow supports multi-image intake in one session
 - new uploads can land safely in `Unassigned`
+- unassigned photos can be batch-assigned into a category slot
 - uncategorized uploads stay off the public site
 - the workflow language is understandable for a non-technical editor
 
@@ -18,6 +19,7 @@ Verify that:
 ### Build and lint
 
 - `npm run lint -- sanity/schemaTypes/documents/galleryItem.ts sanity/lib/queries.ts sanity/structure.ts sanity.config.ts sanity/photoUploadTool.tsx sanity/components/PhotoUploadTool.tsx` — passed
+- `npm run lint -- sanity/components/PhotoOrganizerTool.tsx sanity/components/PhotoUploadTool.tsx sanity/schemaTypes/documents/galleryItem.ts sanity.config.ts sanity/organizePhotosTool.tsx` — passed
 - `npm run lint` — passed with one pre-existing warning in `app/about/page.tsx` for an unused `content` variable
 - `npm run build` — passed
 
@@ -59,9 +61,19 @@ Result:
 Result:
 - [ ] Pending
 
-### 4. Confirm the workflow language feels simple
+### 4. Confirm batch organization works
 
-- Review the upload tool labels, destination cards, and `Unassigned` messaging
+- Open the `Organize Photos` tool in `/studio`
+- Select multiple unassigned photos
+- Choose a category slot card
+- Confirm the selected photos move out of `Unassigned` in one action
+
+Result:
+- [ ] Pending
+
+### 5. Confirm the workflow language feels simple
+
+- Review the upload tool labels, `Description` field wording, category cards, and `Unassigned` messaging
 - Confirm the flow is understandable without needing Sanity/CMS knowledge
 
 Result:

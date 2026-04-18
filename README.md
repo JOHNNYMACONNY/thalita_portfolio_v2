@@ -60,7 +60,7 @@ Phase 1 assumes two Administrator users on Sanity's Free plan for Thalita and he
 4. Confirm the top-level Studio navigation shows `Work Categories` and `Gallery Items`.
 5. Create or edit category documents and confirm the workflow is limited to three category slots total.
 6. For each category, confirm the document supports `title`, `slug`, `description`, `coverImage`, required cover-image `alt`, and `displayOrder`.
-7. Create or edit a `galleryItem` document and confirm it supports `image`, `alt`, one `category` reference, `isVisible`, and `showOnHomePage`.
+7. Create or edit a `galleryItem` document and confirm it supports `image`, `Description`, one `category` reference, `isVisible`, and `showOnHomePage`.
 8. Turn on `showOnHomePage` and confirm `homePageOrder` appears; turn it off and confirm that field is hidden again.
 9. Confirm the workflow does not expose a multi-category assignment path for gallery items.
 
@@ -73,14 +73,15 @@ Phase 6 adds a simpler intake path for non-technical editors inside `/studio`.
 1. Open `Upload Photos` in Studio.
 2. Choose several image files at once.
 3. Leave the destination on `Unassigned` when you want to upload first and sort later.
-4. Review the upload results and move into `Unassigned Photos` to continue organizing.
+4. Review the upload results and move into `Organize Photos` or `Unassigned Photos` to continue organizing.
 5. Assign categories and publish only after the photos are ready for the live site.
 
 ### Important behavior
 
 - Uploads created through the batch upload tool are saved as draft `galleryItem` documents.
 - `Unassigned` photos stay out of `/`, `/work`, and `/work/[slug]` until they are categorized and published.
-- The upload tool pre-fills a starter label and alt text from the filename so editors can refine details after intake.
+- The upload tool pre-fills a starter label and Description from the filename so editors can refine details after intake.
+- `Organize Photos` lets editors select several unassigned photos and move them into a category slot in one step.
 
 ## Phase 2 fresh start workflow
 

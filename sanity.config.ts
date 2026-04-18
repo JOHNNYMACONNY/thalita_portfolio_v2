@@ -4,6 +4,7 @@ import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
 
 import { dataset, projectId } from "./sanity/env";
+import { organizePhotosTool } from "./sanity/organizePhotosTool";
 import { photoUploadTool } from "./sanity/photoUploadTool";
 import { schemaTypes } from "./sanity/schemaTypes";
 import { structure } from "./sanity/structure";
@@ -15,7 +16,7 @@ export default defineConfig({
   dataset,
   basePath: "/studio",
   plugins: [structureTool({ structure })],
-  tools: [photoUploadTool()],
+  tools: [photoUploadTool(), organizePhotosTool()],
   document: {
     newDocumentOptions: (prev, { creationContext }) => {
       if (creationContext.type === "global") {
