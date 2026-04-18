@@ -188,3 +188,15 @@ https://nextjs.org/docs/messages/module-not-found @ http://127.0.0.1:3000/_next/
 [81486500ms] [LOG] [Fast Refresh] done in 814ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
 [81974540ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
 [81974567ms] [LOG] [Fast Refresh] done in 75ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[82857159ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[82857523ms] [LOG] [Fast Refresh] done in 446ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[82858169ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[82858249ms] [LOG] [Fast Refresh] done in 181ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[82867229ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[82867257ms] [LOG] [Fast Refresh] done in 74ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[82934910ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[82934939ms] [LOG] [Fast Refresh] done in 130ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[87141963ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[87141998ms] [LOG] [Fast Refresh] done in 136ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[87143019ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[87143022ms] [LOG] [Fast Refresh] done in 105ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297

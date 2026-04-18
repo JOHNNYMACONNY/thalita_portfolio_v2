@@ -190,3 +190,35 @@ https://nextjs.org/docs/messages/module-not-found @ http://127.0.0.1:3000/_next/
 [81523109ms] [LOG] [Fast Refresh] done in 814ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
 [82011150ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
 [82011176ms] [LOG] [Fast Refresh] done in 76ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[82893768ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[82894132ms] [LOG] [Fast Refresh] done in 444ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[82894777ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[82894858ms] [LOG] [Fast Refresh] done in 181ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[82903838ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[82903866ms] [LOG] [Fast Refresh] done in 75ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[82971519ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[82971548ms] [LOG] [Fast Refresh] done in 130ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[87178572ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[87178607ms] [LOG] [Fast Refresh] done in 137ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[87179628ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[87179631ms] [LOG] [Fast Refresh] done in 105ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[87363914ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[87363967ms] [LOG] [Fast Refresh] done in 154ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[87410059ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[87410110ms] [LOG] [Fast Refresh] done in 153ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[88379039ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=WMlJhJ0KCX5hVUjZCZoJx' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[88380041ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=WMlJhJ0KCX5hVUjZCZoJx' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[88381044ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=WMlJhJ0KCX5hVUjZCZoJx' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[88382048ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=WMlJhJ0KCX5hVUjZCZoJx' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[88383054ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=WMlJhJ0KCX5hVUjZCZoJx' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[88388058ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=WMlJhJ0KCX5hVUjZCZoJx' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[88393066ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=WMlJhJ0KCX5hVUjZCZoJx' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[88398089ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=WMlJhJ0KCX5hVUjZCZoJx' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[88403123ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=WMlJhJ0KCX5hVUjZCZoJx' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[88408151ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=WMlJhJ0KCX5hVUjZCZoJx' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[88413240ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=WMlJhJ0KCX5hVUjZCZoJx' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[88418380ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/webpack-hmr?id=WMlJhJ0KCX5hVUjZCZoJx' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[89415743ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[89415788ms] [LOG] [HMR] connected @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[92838401ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[92838431ms] [LOG] [Fast Refresh] done in 132ms @ http://127.0.0.1:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
