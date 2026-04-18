@@ -8,6 +8,7 @@ const galleryItemProjection = `
   isVisible,
   showOnHomePage,
   homePageOrder,
+  categoryOrder,
   "category": category->{
     _id,
     title,
@@ -37,7 +38,7 @@ export const homeWorkGalleryItemsQuery = defineQuery(`
 
 export const galleryItemsByCategorySlugQuery = defineQuery(`
   *[_type == "galleryItem" && isVisible == true && category->slug.current == $slug]
-    | order(coalesce(homePageOrder, 999) asc, _createdAt asc) {
+    | order(coalesce(categoryOrder, 999) asc, coalesce(homePageOrder, 999) asc, _createdAt asc) {
       ${galleryItemProjection}
     }
 `);

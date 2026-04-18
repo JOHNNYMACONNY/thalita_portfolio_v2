@@ -57,7 +57,7 @@ Phase 1 assumes two Administrator users on Sanity's Free plan for Thalita and he
 1. Run `npm run dev`.
 2. Open `/studio` and confirm the Studio shell loads.
 3. Authenticate successfully with a Sanity Administrator account.
-4. Confirm the top-level Studio navigation shows `Work Categories` and `Gallery Items`.
+4. Confirm the top-level Studio navigation shows the custom `Upload Photos` and `Organize Photos` tools plus the task-oriented Work lists.
 5. Create or edit category documents and confirm the workflow is limited to three category slots total.
 6. For each category, confirm the document supports `title`, `slug`, `description`, `coverImage`, required cover-image `alt`, and `displayOrder`.
 7. Create or edit a `galleryItem` document and confirm it supports `image`, `Description`, one `category` reference, `isVisible`, and `showOnHomePage`.
@@ -74,14 +74,17 @@ Phase 6 adds a simpler intake path for non-technical editors inside `/studio`.
 2. Choose several image files at once.
 3. Leave the destination on `Unassigned` when you want to upload first and sort later.
 4. Review the upload results and move into `Organize Photos` or `Unassigned Photos` to continue organizing.
-5. Assign categories and publish only after the photos are ready for the live site.
+5. Open `Organize Photos` to sort the batch visually, review placement badges, and control homepage/category order.
+6. Publish only after the photos are ready for the live site.
 
 ### Important behavior
 
 - Uploads created through the batch upload tool are saved as draft `galleryItem` documents.
 - `Unassigned` photos stay out of `/`, `/work`, and `/work/[slug]` until they are categorized and published.
 - The upload tool pre-fills a starter label and Description from the filename so editors can refine details after intake.
-- `Organize Photos` lets editors select several unassigned photos and move them into a category slot in one step.
+- `Organize Photos` shows the `Unassigned` tray, all three category slots, and the homepage rail in one visual workspace.
+- Bulk actions let editors move photos between categories, clear category placement, hide/show photos on the site, and add/remove photos from the homepage without opening every document.
+- Category order and homepage order are managed from the organizer instead of manual number editing in the document form.
 
 ## Phase 2 fresh start workflow
 
