@@ -13,6 +13,14 @@ type CategoryOption = {
   displayOrder?: number;
 };
 
+function formatCategoryLabel(category: CategoryOption) {
+  if (category.displayOrder) {
+    return `Slot ${category.displayOrder}: ${category.title}`;
+  }
+
+  return category.title;
+}
+
 const CATEGORY_OPTIONS_QUERY = `*[_type == "category"] | order(displayOrder asc, title asc) {
   _id,
   title,
@@ -92,8 +100,7 @@ export function CategoryReferenceInput(props: ReferenceInputProps) {
         <option value="">Unassigned</option>
         {categories.map((category) => (
           <option key={category._id} value={category._id}>
-            {category.displayOrder ? `${category.displayOrder}. ` : ""}
-            {category.title}
+            {formatCategoryLabel(category)}
           </option>
         ))}
       </Select>
@@ -115,7 +122,7 @@ export function CategoryReferenceInput(props: ReferenceInputProps) {
 
       {!isLoading && !loadError && selectedCategory ? (
         <Text muted size={1}>
-          This photo will be assigned to {selectedCategory.title}
+          This photo will be assigned to {formatCategoryLabel(selectedCategory)}
           {selectedCategory.slug ? ` (${selectedCategory.slug})` : ""}.
         </Text>
       ) : null}
